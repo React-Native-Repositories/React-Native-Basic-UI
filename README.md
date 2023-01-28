@@ -1,4 +1,4 @@
-# CareerWill UI Clone
+# CareerWill UI
 
 # Step 1
 

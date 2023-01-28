@@ -1,4 +1,4 @@
-# CareerWill UI
+# CareerWill UI Clone
 
 # Step 1
 
@@ -94,4 +94,4 @@ to add fonts to android/IOS
 npm run-android
 
 npm run ios
-# CareerWill-Clone
+

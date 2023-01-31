@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import BooksScreen from '../Screens/Drawer/Books';
@@ -12,17 +12,28 @@ import ReferScreen from '../Screens/Drawer/Refer';
 import HelpScreen from '../Screens/Drawer/Help';
 import MyProfile from '../Screens/Drawer/MyProfile';
 import SettingsScreen from '../Screens/Drawer/Settings';
+import {hp} from '../utils/dimensions';
+import { AppIcon, AppText } from '../components';
+import CustomDrawer from './drawer/custom.drawer';
 
 const Drawer = createDrawerNavigator();
-export default function DrawerNavigation() {
+export default function DrawerNavigation(props) {
   return (
-    <Drawer.Navigator initialRouteName="Home">
+    <Drawer.Navigator
+    drawerContent={(props) => <CustomDrawer {...props} />}
+    >
       <Drawer.Screen
         name="Home"
         options={{
           headerShown: true,
           headerLeftLabelVisible: true,
-          drawerLabel: 'Home',
+         
+          drawerIcon: ({color}) => (
+            <View>
+              <AppIcon name="home" size={hp(18)} />
+              <AppText>Home</AppText>
+            </View>
+          ),
         }}
         component={TabNavigation}
       />

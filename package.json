@@ -12,8 +12,11 @@
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.17.11",
     "@react-native-masked-view/masked-view": "^0.2.8",
+    "@react-navigation/bottom-tabs": "^6.5.3",
+    "@react-navigation/drawer": "^6.5.7",
     "@react-navigation/native": "^6.1.2",
     "@react-navigation/stack": "^6.3.11",
+    "lodash": "^4.17.21",
     "metro-config": "^0.74.1",
     "react": "18.2.0",
     "react-native": "0.71.1",

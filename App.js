@@ -8,6 +8,8 @@
 import {LogBox, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
+import StackNavigation from './src/Navigation/stack.navigation';
+import DrawerNavigation from './src/Navigation/drawer.navigation';
 
 function App() {
   /* -------------------------------------------------------------------------- */
@@ -22,7 +24,8 @@ function App() {
 
   return (
     <SafeAreaProvider>
-      <Text>Careerwill</Text>
+      <DrawerNavigation />
+      {/* <StackNavigation /> */}
     </SafeAreaProvider>
   );
 }

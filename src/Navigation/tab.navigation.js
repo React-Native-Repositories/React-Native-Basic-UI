@@ -12,9 +12,10 @@ const Tab = createBottomTabNavigator();
 function TabNavigation(props) {
   return (
     <Tab.Navigator
+      initialRouteName="Dashboard"
       screenOptions={{
-        tabBarActiveBackgroundColor: 'red',
-        tabBarInactiveBackgroundColor: 'green',
+        tabBarActiveBackgroundColor: '#c1c1c1',
+        tabBarInactiveBackgroundColor: '#ccc',
         tabBarLabelStyle: {
           fontSize: RFValue(12),
           fontFamily: 'GoogleSans-Regular',

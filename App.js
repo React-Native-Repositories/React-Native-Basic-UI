@@ -5,10 +5,9 @@
  * @format
  * @flow strict-local
  */
-import {LogBox, StyleSheet, Text, View} from 'react-native';
+import {LogBox, StyleSheet} from 'react-native';
 import React from 'react';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
-import StackNavigation from './src/Navigation/stack.navigation';
 import DrawerNavigation from './src/Navigation/drawer.navigation';
 
 function App() {
@@ -21,7 +20,6 @@ function App() {
   LogBox.ignoreLogs([
     "[react-native-gesture-handler] Seems like you're using an old API with gesture components, check out new Gestures system!",
   ]);
-
   return (
     <SafeAreaProvider>
       <DrawerNavigation />

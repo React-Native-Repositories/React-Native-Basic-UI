@@ -1,61 +1,93 @@
 import React from 'react';
-import {DrawerContentScrollView} from '@react-navigation/drawer';
-import DrawerHelper from './drawer.helper';
+import {
+  View,
+  Text,
+  ImageBackground,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
+import {
+  DrawerContentScrollView,
+  DrawerItemList,
+} from '@react-navigation/drawer';
 
-export default function CustomDrawer(props) {
+import {AppIcon} from '../../components';
+import { RFValue } from '../../utils/npm-helper/react-native-responsive-fontsize';
+
+const CustomDrawer = props => {
   return (
-    <DrawerContentScrollView {...props}>
-      <DrawerHelper route={'Home'} icon={'home'} title={'Home'} {...props} />
-      <DrawerHelper
-        route={'EBooks'}
-        icon={'book'}
-        title={'E-Book'}
+    <View style={{flex: 1}}>
+      <DrawerContentScrollView
         {...props}
-      />
-      <DrawerHelper
-        route={'TestSeries'}
-        icon={'home'}
-        title={'Test Series'}
-        {...props}
-      />
-      <DrawerHelper
-        route={'MyOrders'}
-        icon={'home'}
-        title={'My Orders'}
-        {...props}
-      />
-      <DrawerHelper route={'Books'} icon={'home'} title={'Books'} {...props} />
-      <DrawerHelper
-        route={'PrivacyPloicy'}
-        icon={'home'}
-        title={'Privacy Ploicy'}
-        {...props}
-      />
-      <DrawerHelper route={'FAQ'} icon={'home'} title={'FAQ'} {...props} />
-      <DrawerHelper
-        route={'Refer'}
-        icon={'home'}
-        title={'Refer / Share App'}
-        {...props}
-      />
-      <DrawerHelper
-        route={'Help'}
-        icon={'home'}
-        title={'Call Us / Helpline'}
-        {...props}
-      />
-      <DrawerHelper
-        route={'MyProfile'}
-        icon={'home'}
-        title={'My Profile'}
-        {...props}
-      />
-      <DrawerHelper
-        route={'Settings'}
-        icon={'settings'}
-        title={'Settings'}
-        {...props}
-      />
-    </DrawerContentScrollView>
+        contentContainerStyle={{backgroundColor: 'lightGray'}}>
+        <ImageBackground
+          source={require('../../Assets/Images/menu-bg.jpeg')}
+          style={{padding: 20}}>
+          <View
+            style={{
+              height: 80,
+              width: 80,
+              borderRadius: 40,
+              marginBottom: 10,
+              backgroundColor: '#ccc',
+            }}
+          />
+          <Text
+            style={{
+              color: '#000',
+              fontSize: 18,
+              fontFamily: 'GoogleSans-Medium',
+              marginBottom: 5,
+            }}>
+            John Doe
+          </Text>
+          <View style={{flexDirection: 'row'}}>
+            <Text
+              style={{
+                color: '#000',
+                fontFamily: 'GoogleSans-Regular',
+                marginRight: 5,
+              }}>
+              jd@gmail.com
+            </Text>
+            {/* <AppIcon name="mail" size={14} color="#ccc" /> */}
+          </View>
+        </ImageBackground>
+        <View style={{flex: 1, backgroundColor: '#fff', paddingTop: 10}}>
+          <DrawerItemList {...props} />
+        </View>
+      </DrawerContentScrollView>
+
+      <View style={{padding: RFValue(10), borderTopWidth: 1, borderTopColor: '#ccc'}}>
+        <TouchableOpacity onPress={() => {}} style={{paddingVertical: 15}}>
+          <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <AppIcon name="share-social-outline" size={22} />
+            <Text
+              style={{
+                fontSize: RFValue(14),
+                fontFamily: 'GoogleSans-Medium',
+                marginLeft: 5,
+              }}>
+              Tell a Friend
+            </Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => {}} >
+          <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <AppIcon name="exit-outline" size={22} />
+            <Text
+              style={{
+                fontSize: RFValue(14),
+                fontFamily: 'GoogleSans-Medium',
+                marginLeft: RFValue(20),
+              }}>
+              Sign Out
+            </Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+    </View>
   );
-}
+};
+
+export default CustomDrawer;

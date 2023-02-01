@@ -12,8 +12,11 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		5E9C2FD2AFB847BC87EE5DAA /* GoogleSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A9EC82366DE442BBDA72C9E /* GoogleSans-Regular.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-CareerWill-CareerWillTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-CareerWill-CareerWillTests.a */; };
+		7DDFE6B8627745DEB228DE9B /* GoogleSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 60C431FA94D64D109EF881C6 /* GoogleSans-Medium.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		C87AE3856C3A4E58A5D76A59 /* GoogleSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5896BAC31BE7469F814F7530 /* GoogleSans-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,10 +42,13 @@
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-CareerWill-CareerWillTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CareerWill-CareerWillTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-CareerWill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareerWill.debug.xcconfig"; path = "Target Support Files/Pods-CareerWill/Pods-CareerWill.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-CareerWill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareerWill.release.xcconfig"; path = "Target Support Files/Pods-CareerWill/Pods-CareerWill.release.xcconfig"; sourceTree = "<group>"; };
+		5896BAC31BE7469F814F7530 /* GoogleSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GoogleSans-Bold.ttf"; path = "../assets/fonts/GoogleSans-Bold.ttf"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-CareerWill-CareerWillTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareerWill-CareerWillTests.debug.xcconfig"; path = "Target Support Files/Pods-CareerWill-CareerWillTests/Pods-CareerWill-CareerWillTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-CareerWill.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CareerWill.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		60C431FA94D64D109EF881C6 /* GoogleSans-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GoogleSans-Medium.ttf"; path = "../assets/fonts/GoogleSans-Medium.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = CareerWill/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-CareerWill-CareerWillTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareerWill-CareerWillTests.release.xcconfig"; path = "Target Support Files/Pods-CareerWill-CareerWillTests/Pods-CareerWill-CareerWillTests.release.xcconfig"; sourceTree = "<group>"; };
+		9A9EC82366DE442BBDA72C9E /* GoogleSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "GoogleSans-Regular.ttf"; path = "../assets/fonts/GoogleSans-Regular.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -113,6 +119,17 @@
 			name = Libraries;
 			sourceTree = "<group>";
 		};
+		835E48875D8141DBA60627F6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5896BAC31BE7469F814F7530 /* GoogleSans-Bold.ttf */,
+				60C431FA94D64D109EF881C6 /* GoogleSans-Medium.ttf */,
+				9A9EC82366DE442BBDA72C9E /* GoogleSans-Regular.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +139,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				835E48875D8141DBA60627F6 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -244,6 +262,9 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				C87AE3856C3A4E58A5D76A59 /* GoogleSans-Bold.ttf in Resources */,
+				7DDFE6B8627745DEB228DE9B /* GoogleSans-Medium.ttf in Resources */,
+				5E9C2FD2AFB847BC87EE5DAA /* GoogleSans-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

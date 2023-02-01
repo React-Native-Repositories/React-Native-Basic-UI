@@ -12,27 +12,55 @@ import ReferScreen from '../Screens/Drawer/Refer';
 import HelpScreen from '../Screens/Drawer/Help';
 import MyProfile from '../Screens/Drawer/MyProfile';
 import SettingsScreen from '../Screens/Drawer/Settings';
-import {hp} from '../utils/dimensions';
-import { AppIcon, AppText } from '../components';
+import {AppIcon} from '../components';
 import CustomDrawer from './drawer/custom.drawer';
 
 const Drawer = createDrawerNavigator();
+
+const NavigationDrawerStructure = props => {
+  //Structure for the navigatin Drawer
+  const toggleDrawer = () => {
+    //Props to open/close the drawer
+    props.navigationProps.toggleDrawer();
+  };
+
+  return (
+    <View style={{flexDirection: 'row'}}>
+      <TouchableOpacity onPress={toggleDrawer}>
+        {/*Donute Button Image */}
+        <Image
+          source={{
+            uri: 'https://raw.githubusercontent.com/AboutReact/sampleresource/master/drawerWhite.png',
+          }}
+          style={{width: 25, height: 25, marginLeft: 5}}
+        />
+      </TouchableOpacity>
+    </View>
+  );
+};
+
 export default function DrawerNavigation(props) {
   return (
     <Drawer.Navigator
-    drawerContent={(props) => <CustomDrawer {...props} />}
-    >
+      drawerContent={props => <CustomDrawer {...props} />}
+      screenOptions={{
+        headerShown: false,
+        drawerActiveBackgroundColor: '#ccc',
+        drawerActiveTintColor: '#fff',
+        drawerInactiveTintColor: '#333',
+        drawerLabelStyle: {
+          marginLeft: -25,
+          fontFamily: 'GoogleSans-Medium',
+          fontSize: 14,
+        },
+      }}>
       <Drawer.Screen
         name="Home"
         options={{
           headerShown: true,
           headerLeftLabelVisible: true,
-         
           drawerIcon: ({color}) => (
-            <View>
-              <AppIcon name="home" size={hp(18)} />
-              <AppText>Home</AppText>
-            </View>
+            <AppIcon name="home" size={22} color={color} />
           ),
         }}
         component={TabNavigation}
@@ -40,34 +68,58 @@ export default function DrawerNavigation(props) {
       <Drawer.Screen
         name="EBooks"
         options={{
+          headerShown: true,
           drawerLabel: 'E-Books',
+          drawerIcon: ({color}) => (
+            <AppIcon name="book" size={22} color={color} />
+          ),
         }}
         component={EbooksScreen}
       />
       <Drawer.Screen
         name="TestSeries"
         options={{
+          headerShown: true,
+
           drawerLabel: 'Test Series',
+          drawerIcon: ({color}) => (
+            <AppIcon name="create" size={22} color={color} />
+          ),
         }}
         component={TestSeriesScreen}
       />
       <Drawer.Screen
         name="MyOrders"
         options={{
+          headerShown: true,
+
           drawerLabel: 'My Orders',
+          drawerIcon: ({color}) => (
+            <AppIcon name="cart" size={22} color={color} />
+          ),
         }}
         component={MyOrdersScreen}
       />
       <Drawer.Screen
         name="Books"
         options={{
+          headerShown: true,
+
           drawerLabel: 'Books',
+          drawerIcon: ({color}) => (
+            <AppIcon name="book-outline" size={22} color={color} />
+          ),
         }}
         component={BooksScreen}
       />
       <Drawer.Screen
         options={{
+          headerShown: true,
+
           drawerLabel: 'FAQ',
+          drawerIcon: ({color}) => (
+            <AppIcon name="star-half" size={22} color={color} />
+          ),
         }}
         name="FAQ"
         component={FAQScreen}
@@ -75,35 +127,47 @@ export default function DrawerNavigation(props) {
       <Drawer.Screen
         name="PrivacyPloicy"
         options={{
+          headerShown: true,
+
           drawerLabel: 'Privacy Ploicy',
+          drawerIcon: ({color}) => (
+            <AppIcon name="alert-circle" size={22} color={color} />
+          ),
         }}
         component={PrivacyPolicyScreen}
       />
       <Drawer.Screen
-        name="Refer"
-        options={{
-          drawerLabel: 'Refer / Share App',
-        }}
-        component={ReferScreen}
-      />
-      <Drawer.Screen
         name="Help"
         options={{
+          headerShown: true,
+
           drawerLabel: 'Call Us / Helpline',
+          drawerIcon: ({color}) => (
+            <AppIcon name="people-circle" size={22} color={color} />
+          ),
         }}
         component={HelpScreen}
       />
-      <Drawer.Screen
+      {/* <Drawer.Screen
         name="MyProfile"
         options={{
+          headerShown: true,
+
           drawerLabel: 'My Profile',
+          drawerIcon: ({color}) => (
+            <AppIcon name="person-outline" size={22} color={color} />
+          ),
         }}
         component={MyProfile}
-      />
+      /> */}
       <Drawer.Screen
         name="Settings"
         options={{
+          headerShown: true,
           drawerLabel: 'Settings',
+          drawerIcon: ({color}) => (
+            <AppIcon name="settings-outline" size={22} color={color} />
+          ),
         }}
         component={SettingsScreen}
       />

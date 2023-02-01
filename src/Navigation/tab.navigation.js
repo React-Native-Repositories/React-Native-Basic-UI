@@ -6,16 +6,16 @@ import {hp} from '../utils/dimensions';
 import HomeScreen from '../Screens/Tab/Home';
 import LiveClassScreen from '../Screens/Tab/LiveClass';
 import DoubtsScreen from '../Screens/Tab/Doubts';
+import { AppIcon } from '../components';
 
 const Tab = createBottomTabNavigator();
-
 function TabNavigation(props) {
   return (
     <Tab.Navigator
       initialRouteName="Dashboard"
       screenOptions={{
-        tabBarActiveBackgroundColor: '#c1c1c1',
-        tabBarInactiveBackgroundColor: '#ccc',
+        tabBarActiveBackgroundColor: '#3b4b82',
+        tabBarInactiveBackgroundColor: '#3b4b82cf',
         tabBarLabelStyle: {
           fontSize: RFValue(12),
           fontFamily: 'GoogleSans-Regular',
@@ -31,7 +31,7 @@ function TabNavigation(props) {
         ],
       }}>
       <Tab.Screen
-        name="Dashboard"
+        name="Home"
         component={HomeScreen}
         options={{
           headerShown: false,
@@ -39,17 +39,16 @@ function TabNavigation(props) {
           tabBarShowLabel: false,
           tabBarActiveTintColor: 'white',
           tabBarInactiveTintColor: 'white',
-          // tabBarIcon: ({color}) => <HomeMoreSvgComponent />,
           tabBarIcon: ({color}) => (
             <View alignItems={'center'}>
-              {/* icon here */}
+              <AppIcon name='home' size={22} color={color} />
               <Text
                 style={{
                   fontSize: RFValue(12),
                   color: 'white',
                   marginTop: hp(2),
                 }}>
-                Dashboard
+                Home
               </Text>
             </View>
           ),
@@ -64,10 +63,9 @@ function TabNavigation(props) {
           tabBarShowLabel: false,
           tabBarActiveTintColor: 'white',
           tabBarInactiveTintColor: 'white',
-          // tabBarIcon: ({color}) => <HomeMoreSvgComponent />,
           tabBarIcon: ({color}) => (
             <View alignItems={'center'}>
-              {/* icon here */}
+              <AppIcon name='videocam' size={22} color={color} />
               <Text
                 style={{
                   fontSize: RFValue(12),
@@ -89,10 +87,9 @@ function TabNavigation(props) {
           tabBarShowLabel: false,
           tabBarActiveTintColor: 'white',
           tabBarInactiveTintColor: 'white',
-          // tabBarIcon: ({color}) => <HomeMoreSvgComponent />,
           tabBarIcon: ({color}) => (
             <View alignItems={'center'}>
-              {/* icon here */}
+              <AppIcon name='information-circle' size={22} color={color} />
               <Text
                 style={{
                   fontSize: RFValue(12),

@@ -12,7 +12,7 @@ import {
 } from '@react-navigation/drawer';
 
 import {AppIcon} from '../../components';
-import { RFValue } from '../../utils/npm-helper/react-native-responsive-fontsize';
+import {RFValue} from '../../utils/npm-helper/react-native-responsive-fontsize';
 
 const CustomDrawer = props => {
   return (
@@ -29,7 +29,7 @@ const CustomDrawer = props => {
               width: 80,
               borderRadius: 40,
               marginBottom: 10,
-              backgroundColor: '#ccc',
+              backgroundColor: '#3b4b82',
             }}
           />
           <Text
@@ -56,36 +56,23 @@ const CustomDrawer = props => {
         <View style={{flex: 1, backgroundColor: '#fff', paddingTop: 10}}>
           <DrawerItemList {...props} />
         </View>
-      </DrawerContentScrollView>
 
-      <View style={{padding: RFValue(10), borderTopWidth: 1, borderTopColor: '#ccc'}}>
-        <TouchableOpacity onPress={() => {}} style={{paddingVertical: 15}}>
-          <View style={{flexDirection: 'row', alignItems: 'center'}}>
-            <AppIcon name="share-social-outline" size={22} />
-            <Text
-              style={{
-                fontSize: RFValue(14),
-                fontFamily: 'GoogleSans-Medium',
-                marginLeft: 5,
-              }}>
-              Tell a Friend
-            </Text>
-          </View>
-        </TouchableOpacity>
+        {/* <View style={{padding: RFValue(10), borderTopWidth: 1, borderTopColor: '#ccc',marginLeft:RFValue(10)}}>
         <TouchableOpacity onPress={() => {}} >
-          <View style={{flexDirection: 'row', alignItems: 'center'}}>
+          <View style={{flexDirection: 'row'}}>
             <AppIcon name="exit-outline" size={22} />
             <Text
               style={{
-                fontSize: RFValue(14),
-                fontFamily: 'GoogleSans-Medium',
-                marginLeft: RFValue(20),
+                fontSize: RFValue(12),
+                fontFamily: 'GoogleSans-Regular',
+                marginLeft: RFValue(5),
               }}>
               Sign Out
             </Text>
           </View>
         </TouchableOpacity>
-      </View>
+        </View> */}
+      </DrawerContentScrollView>
     </View>
   );
 };

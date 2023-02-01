@@ -1,6 +1,7 @@
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
+ * https://dribbble.com/shots/5726952-Bingo-App-UI-Kit/attachments/11021810?mode=media
  *
  * @format
  * @flow strict-local

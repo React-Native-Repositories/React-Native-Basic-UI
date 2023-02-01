@@ -45,12 +45,12 @@ export default function DrawerNavigation(props) {
       drawerContent={props => <CustomDrawer {...props} />}
       screenOptions={{
         headerShown: false,
-        drawerActiveBackgroundColor: '#ccc',
+        drawerActiveBackgroundColor: '#3b4b82',
         drawerActiveTintColor: '#fff',
-        drawerInactiveTintColor: '#333',
+        drawerInactiveTintColor: '#2e343d',
         drawerLabelStyle: {
           marginLeft: -25,
-          fontFamily: 'GoogleSans-Medium',
+          fontFamily: 'GoogleSans-Regular',
           fontSize: 14,
         },
       }}>
@@ -118,7 +118,7 @@ export default function DrawerNavigation(props) {
 
           drawerLabel: 'FAQ',
           drawerIcon: ({color}) => (
-            <AppIcon name="star-half" size={22} color={color} />
+            <AppIcon name="reorder-four-outline" size={22} color={color} />
           ),
         }}
         name="FAQ"
@@ -148,18 +148,18 @@ export default function DrawerNavigation(props) {
         }}
         component={HelpScreen}
       />
-      {/* <Drawer.Screen
-        name="MyProfile"
+      <Drawer.Screen
+        name="Refer"
         options={{
           headerShown: true,
 
-          drawerLabel: 'My Profile',
+          drawerLabel: 'Tell a Friend',
           drawerIcon: ({color}) => (
-            <AppIcon name="person-outline" size={22} color={color} />
+            <AppIcon name="share-social-outline" size={22} color={color} />
           ),
         }}
-        component={MyProfile}
-      /> */}
+        component={ReferScreen}
+      />
       <Drawer.Screen
         name="Settings"
         options={{

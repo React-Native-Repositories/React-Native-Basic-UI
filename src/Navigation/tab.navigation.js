@@ -6,7 +6,7 @@ import {hp} from '../utils/dimensions';
 import HomeScreen from '../Screens/Tab/Home';
 import LiveClassScreen from '../Screens/Tab/LiveClass';
 import DoubtsScreen from '../Screens/Tab/Doubts';
-import { AppIcon } from '../components';
+import {AppIcon} from '../components';
 
 const Tab = createBottomTabNavigator();
 function TabNavigation(props) {
@@ -14,8 +14,10 @@ function TabNavigation(props) {
     <Tab.Navigator
       initialRouteName="Dashboard"
       screenOptions={{
+        // tabBarActiveBackgroundColor: '#3b4b82',
+        // tabBarInactiveBackgroundColor: '#3b4b82cf',
         tabBarActiveBackgroundColor: '#3b4b82',
-        tabBarInactiveBackgroundColor: '#3b4b82cf',
+        tabBarInactiveBackgroundColor: '#516195',
         tabBarLabelStyle: {
           fontSize: RFValue(12),
           fontFamily: 'GoogleSans-Regular',
@@ -41,7 +43,7 @@ function TabNavigation(props) {
           tabBarInactiveTintColor: 'white',
           tabBarIcon: ({color}) => (
             <View alignItems={'center'}>
-              <AppIcon name='home' size={22} color={color} />
+              <AppIcon name="home" size={22} color={color} />
               <Text
                 style={{
                   fontSize: RFValue(12),
@@ -65,7 +67,7 @@ function TabNavigation(props) {
           tabBarInactiveTintColor: 'white',
           tabBarIcon: ({color}) => (
             <View alignItems={'center'}>
-              <AppIcon name='videocam' size={22} color={color} />
+              <AppIcon name="videocam" size={22} color={color} />
               <Text
                 style={{
                   fontSize: RFValue(12),
@@ -89,7 +91,7 @@ function TabNavigation(props) {
           tabBarInactiveTintColor: 'white',
           tabBarIcon: ({color}) => (
             <View alignItems={'center'}>
-              <AppIcon name='information-circle' size={22} color={color} />
+              <AppIcon name="information-circle" size={22} color={color} />
               <Text
                 style={{
                   fontSize: RFValue(12),

@@ -3,16 +3,11 @@ import {
   View,
   Text,
   ImageBackground,
-  Image,
-  TouchableOpacity,
 } from 'react-native';
 import {
   DrawerContentScrollView,
   DrawerItemList,
 } from '@react-navigation/drawer';
-
-import {AppIcon} from '../../components';
-import {RFValue} from '../../utils/npm-helper/react-native-responsive-fontsize';
 
 const CustomDrawer = props => {
   return (
@@ -29,7 +24,7 @@ const CustomDrawer = props => {
               width: 80,
               borderRadius: 40,
               marginBottom: 10,
-              backgroundColor: '#3b4b82',
+              backgroundColor: '#516195',
             }}
           />
           <Text

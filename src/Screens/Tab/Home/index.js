@@ -1,11 +1,18 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import { gloablStyles } from '../../../Styles/global.styles';
+import {gloablStyles} from '../../../Styles/global.styles';
+import {AppThemeScreen} from '../../../components';
+import useThemeToggler from '../../../Theme/hooks/useThemeToggler';
 
 export default function HomeScreen() {
+  const {isThemeDark} = useThemeToggler();
   return (
-    <View style={gloablStyles.container}>
-      <Text>Home Screen</Text>
-    </View>
+    <AppThemeScreen>
+      <View style={gloablStyles.container}>
+        <Text style={{color: isThemeDark ? 'white' : 'black'}}>
+          Home Screen
+        </Text>
+      </View>
+    </AppThemeScreen>
   );
 }

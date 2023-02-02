@@ -15,6 +15,7 @@ import {AppIcon} from '../components';
 import CustomDrawer from './drawer/custom.drawer';
 import {RFValue} from '../utils/npm-helper/react-native-responsive-fontsize';
 import {DrawerActions, useNavigation} from '@react-navigation/native';
+import ToggleDarkMode from '../components/ToggleDarkMode';
 
 const Drawer = createDrawerNavigator();
 
@@ -45,16 +46,17 @@ export default function DrawerNavigation(props) {
         headerRight: () => (
           <TouchableOpacity
             onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
-            <AppIcon
-              name={'notifications-circle'}
+            {/* <AppIcon
+              name={'sunny-sharp'}
               size={RFValue(22)}
               color="white"
               style={{marginRight: 10}}
-            />
+            /> */}
+            <ToggleDarkMode />
           </TouchableOpacity>
         ),
         headerStyle: {
-          backgroundColor: '#3b4b82', //Set Header color
+          backgroundColor: '#516195', //Set Header color
         },
         drawerLabelStyle: {
           marginLeft: -25,

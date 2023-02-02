@@ -1,12 +1,11 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import {StyleSheet, Text, View} from 'react-native';
+import React from 'react';
+import { gloablStyles } from '../../../Styles/global.styles';
 
 export default function HomeScreen() {
   return (
-    <View>
-      <Text>HomeScreen</Text>
+    <View style={gloablStyles.container}>
+      <Text>Home Screen</Text>
     </View>
-  )
+  );
 }
-
-const styles = StyleSheet.create({})

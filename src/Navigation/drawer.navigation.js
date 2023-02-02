@@ -1,4 +1,4 @@
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import BooksScreen from '../Screens/Drawer/Books';
@@ -10,36 +10,16 @@ import FAQScreen from '../Screens/Drawer/FAQ';
 import PrivacyPolicyScreen from '../Screens/Drawer/PrivacyPolicy';
 import ReferScreen from '../Screens/Drawer/Refer';
 import HelpScreen from '../Screens/Drawer/Help';
-import MyProfile from '../Screens/Drawer/MyProfile';
 import SettingsScreen from '../Screens/Drawer/Settings';
 import {AppIcon} from '../components';
 import CustomDrawer from './drawer/custom.drawer';
+import {RFValue} from '../utils/npm-helper/react-native-responsive-fontsize';
+import {DrawerActions, useNavigation} from '@react-navigation/native';
 
 const Drawer = createDrawerNavigator();
 
-const NavigationDrawerStructure = props => {
-  //Structure for the navigatin Drawer
-  const toggleDrawer = () => {
-    //Props to open/close the drawer
-    props.navigationProps.toggleDrawer();
-  };
-
-  return (
-    <View style={{flexDirection: 'row'}}>
-      <TouchableOpacity onPress={toggleDrawer}>
-        {/*Donute Button Image */}
-        <Image
-          source={{
-            uri: 'https://raw.githubusercontent.com/AboutReact/sampleresource/master/drawerWhite.png',
-          }}
-          style={{width: 25, height: 25, marginLeft: 5}}
-        />
-      </TouchableOpacity>
-    </View>
-  );
-};
-
 export default function DrawerNavigation(props) {
+  const navigation = useNavigation();
   return (
     <Drawer.Navigator
       drawerContent={props => <CustomDrawer {...props} />}
@@ -48,6 +28,34 @@ export default function DrawerNavigation(props) {
         drawerActiveBackgroundColor: '#3b4b82',
         drawerActiveTintColor: '#fff',
         drawerInactiveTintColor: '#2e343d',
+        headerTitleStyle: {
+          color: 'white',
+        },
+        headerLeft: () => (
+          <TouchableOpacity
+            onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
+            <AppIcon
+              name={'menu'}
+              size={RFValue(22)}
+              color="white"
+              style={{marginLeft: 10}}
+            />
+          </TouchableOpacity>
+        ),
+        headerRight: () => (
+          <TouchableOpacity
+            onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
+            <AppIcon
+              name={'notifications-circle'}
+              size={RFValue(22)}
+              color="white"
+              style={{marginRight: 10}}
+            />
+          </TouchableOpacity>
+        ),
+        headerStyle: {
+          backgroundColor: '#3b4b82', //Set Header color
+        },
         drawerLabelStyle: {
           marginLeft: -25,
           fontFamily: 'GoogleSans-Regular',

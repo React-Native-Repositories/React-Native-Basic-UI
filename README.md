@@ -10,6 +10,8 @@
 
 :white_check_mark: Light and Dark Mode 
 
+:white_check_mark: SVG Images Rendering 
+
 :loop: Language Translation ( Coming soon... )
 
 :loop: Sub Tabs ( Coming soon... )

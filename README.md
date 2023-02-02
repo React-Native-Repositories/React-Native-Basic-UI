@@ -95,3 +95,7 @@ npm run-android
 
 npm run ios
 
+ <img src="/screenshots/1.jpg" width="400px"</img> 
+ <img src="/screenshots/2.jpg" width="400px"</img> 
+ <img src="/screenshots/3.jpg" width="400px"</img> 
+ <img src="/screenshots/4.jpg" width="400px"</img> 

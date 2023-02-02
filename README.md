@@ -95,7 +95,12 @@ npm run-android
 
 npm run ios
 
- <img src="/screenshots/1.png" width="200px" height="300px"></img> 
- <img src="/screenshots/2.png" width="200px" height="300px"></img> 
- <img src="/screenshots/3.png" width="200px" height="300px"></img> 
- <img src="/screenshots/4.png" width="200px" height="300px"></img> 
+# Light Mode
+
+ <img src="/screenshots/4.png" width="400px"></img> 
+ <img src="/screenshots/3.png" width="400px" ></img> 
+  
+  # Dark Mode
+  <img src="/screenshots/2.png" width="400px" ></img> 
+  <img src="/screenshots/1.png" width="400px" ></img> 
+

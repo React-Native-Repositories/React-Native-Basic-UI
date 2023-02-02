@@ -19,7 +19,7 @@ function ToggleDarkMode() {
   };
 
   return (
-    <Pressable onPress={handleToggleTheme} unstable_pressDelay={0}>
+    <Pressable onPress={handleToggleTheme} unstable_pressDelay={0} style={{marginRight:10}}>
       <AppIcon
         name={iconName}
         size={hp(25)}

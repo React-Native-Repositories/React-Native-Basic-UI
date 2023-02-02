@@ -33,7 +33,7 @@ function TabNavigation(props) {
         ],
       }}>
       <Tab.Screen
-        name="Home"
+        name="Main"
         component={HomeScreen}
         options={{
           headerShown: false,
@@ -91,7 +91,7 @@ function TabNavigation(props) {
           tabBarInactiveTintColor: 'white',
           tabBarIcon: ({color}) => (
             <View alignItems={'center'}>
-              <AppIcon name="information-circle" size={22} color={color} />
+              <AppIcon name="help-circle" size={22} color={color} />
               <Text
                 style={{
                   fontSize: RFValue(12),

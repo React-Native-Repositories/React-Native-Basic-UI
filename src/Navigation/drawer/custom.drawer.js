@@ -1,23 +1,33 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  ImageBackground,
-} from 'react-native';
+import {View, Text, ImageBackground, TouchableOpacity, Pressable} from 'react-native';
 import {
   DrawerContentScrollView,
   DrawerItemList,
 } from '@react-navigation/drawer';
+import useThemeToggler from '../../Theme/hooks/useThemeToggler';
+import {colors} from '../../Theme/colors';
+import {AppText} from '../../components';
 
 const CustomDrawer = props => {
+  const {isThemeDark} = useThemeToggler();
+
   return (
-    <View style={{flex: 1}}>
+    <View style={{flex: 1,backgroundColor:isThemeDark ? colors.dark.sidebar : 'white'}}>
       <DrawerContentScrollView
         {...props}
-        contentContainerStyle={{backgroundColor: 'lightGray'}}>
-        <ImageBackground
-          source={require('../../Assets/Images/menu-bg.jpeg')}
-          style={{padding: 20}}>
+        contentContainerStyle={{
+          backgroundColor: isThemeDark
+            ? colors.dark.sidebar
+            : colors.light.sidebar,
+        }}>
+        <Pressable
+          style={{
+            padding: 20,
+            borderColor: isThemeDark ? colors.dark.sidebar : 'white',
+            borderWidth: 0.5,
+            borderBottomColor: isThemeDark ? 'white' : colors.light.primaryColorLight,
+          }}
+          onPress={() => props.navigation.navigate('MyProfile')}>
           <View
             style={{
               height: 80,
@@ -27,46 +37,36 @@ const CustomDrawer = props => {
               backgroundColor: '#516195',
             }}
           />
-          <Text
+          <AppText
             style={{
-              color: '#000',
+              color: isThemeDark ? 'white' : 'black',
               fontSize: 18,
               fontFamily: 'GoogleSans-Medium',
               marginBottom: 5,
             }}>
             John Doe
-          </Text>
+          </AppText>
           <View style={{flexDirection: 'row'}}>
             <Text
               style={{
-                color: '#000',
+                color: isThemeDark ? 'white' : 'black',
                 fontFamily: 'GoogleSans-Regular',
                 marginRight: 5,
               }}>
               jd@gmail.com
             </Text>
-            {/* <AppIcon name="mail" size={14} color="#ccc" /> */}
           </View>
-        </ImageBackground>
-        <View style={{flex: 1, backgroundColor: '#fff', paddingTop: 10}}>
+        </Pressable>
+        <View
+          style={{
+            flex: 1,
+            backgroundColor: isThemeDark
+              ? colors.dark.sidebar
+              : colors.light.sidebar,
+            paddingTop: 10,
+          }}>
           <DrawerItemList {...props} />
         </View>
-
-        {/* <View style={{padding: RFValue(10), borderTopWidth: 1, borderTopColor: '#ccc',marginLeft:RFValue(10)}}>
-        <TouchableOpacity onPress={() => {}} >
-          <View style={{flexDirection: 'row'}}>
-            <AppIcon name="exit-outline" size={22} />
-            <Text
-              style={{
-                fontSize: RFValue(12),
-                fontFamily: 'GoogleSans-Regular',
-                marginLeft: RFValue(5),
-              }}>
-              Sign Out
-            </Text>
-          </View>
-        </TouchableOpacity>
-        </View> */}
       </DrawerContentScrollView>
     </View>
   );

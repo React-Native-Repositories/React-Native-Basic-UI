@@ -16,11 +16,17 @@ import CustomDrawer from './drawer/custom.drawer';
 import {RFValue} from '../utils/npm-helper/react-native-responsive-fontsize';
 import {DrawerActions, useNavigation} from '@react-navigation/native';
 import ToggleDarkMode from '../components/ToggleDarkMode';
+import MyProfile from '../Screens/Stack/MyProfile';
+import useThemeToggler from '../Theme/hooks/useThemeToggler';
+import {colors} from '../Theme/colors';
+import StackNavigation from './stack.navigation';
 
 const Drawer = createDrawerNavigator();
 
 export default function DrawerNavigation(props) {
   const navigation = useNavigation();
+  const {isThemeDark} = useThemeToggler();
+
   return (
     <Drawer.Navigator
       drawerContent={props => <CustomDrawer {...props} />}
@@ -28,9 +34,14 @@ export default function DrawerNavigation(props) {
         headerShown: false,
         drawerActiveBackgroundColor: '#3b4b82',
         drawerActiveTintColor: '#fff',
-        drawerInactiveTintColor: '#2e343d',
+        drawerInactiveTintColor: isThemeDark
+          ? colors.common.secondaryWhite
+          : '#2e343d',
         headerTitleStyle: {
           color: 'white',
+        },
+        drawerContentContainerStyle: {
+          drawerBackgroundColor: '#2e343d',
         },
         headerLeft: () => (
           <TouchableOpacity
@@ -75,6 +86,18 @@ export default function DrawerNavigation(props) {
         }}
         component={TabNavigation}
       />
+       <Drawer.Screen
+        name="MyProfile"
+        options={{
+          drawerItemStyle: {display: 'none'},
+          headerShown: false,
+          label: 'My Profile',
+          drawerIcon: ({color}) => (
+            <AppIcon name="person" size={22} color={color} />
+          ),
+        }}
+        component={StackNavigation}
+      />
       <Drawer.Screen
         name="EBooks"
         options={{
@@ -90,7 +113,6 @@ export default function DrawerNavigation(props) {
         name="TestSeries"
         options={{
           headerShown: true,
-
           drawerLabel: 'Test Series',
           drawerIcon: ({color}) => (
             <AppIcon name="create" size={22} color={color} />
@@ -102,7 +124,6 @@ export default function DrawerNavigation(props) {
         name="MyOrders"
         options={{
           headerShown: true,
-
           drawerLabel: 'My Orders',
           drawerIcon: ({color}) => (
             <AppIcon name="cart" size={22} color={color} />
@@ -114,18 +135,16 @@ export default function DrawerNavigation(props) {
         name="Books"
         options={{
           headerShown: true,
-
           drawerLabel: 'Books',
           drawerIcon: ({color}) => (
             <AppIcon name="book-outline" size={22} color={color} />
           ),
         }}
-        component={BooksScreen}
+        component={StackNavigation}
       />
       <Drawer.Screen
         options={{
           headerShown: true,
-
           drawerLabel: 'FAQ',
           drawerIcon: ({color}) => (
             <AppIcon name="reorder-four-outline" size={22} color={color} />
@@ -170,6 +189,7 @@ export default function DrawerNavigation(props) {
         }}
         component={ReferScreen}
       />
+     
       <Drawer.Screen
         name="Settings"
         options={{

@@ -1,19 +1,25 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import LoginScreen from '../Screens/Stack/Login';
-import TabNavigation from './tab.navigation';
+import MyProfile from '../Screens/Stack/MyProfile';
+import BooksScreen from '../Screens/Drawer/Books';
+import useThemeToggler from '../Theme/hooks/useThemeToggler';
+import {colors} from '../Theme/colors';
 
 const Stack = createStackNavigator();
 function StackNavigation(props) {
+  const {isThemeDark} = useThemeToggler();
+
   return (
     <Stack.Navigator
-      initialRouteName="Main"
       detachInactiveScreens={false}
       screenOptions={{
         animationEnabled: false,
         headerShown: false,
         headerStyle: {
-          backgroundColor: 'black',
+          backgroundColor: isThemeDark
+            ? colors.light.primaryColorLight
+            : 'black',
         },
         headerTintColor: '#fff',
         headerTitleStyle: {
@@ -23,12 +29,17 @@ function StackNavigation(props) {
         },
       }}>
       <Stack.Screen
-        name="Main"
-        component={TabNavigation}
+        name="MyProfile"
         options={{
-          headerShown: false,
-          headerBackTitleVisible: false,
+          headerShown: true,
+          headerBackTitleVisible: true,
+          headerTitleStyle: {fontFamily: 'GoogleSans-Regular'},
+          headerTitleStyle: {
+            fontSize: 16,
+          },
+          label: 'My Profile',
         }}
+        component={MyProfile}
       />
       <Stack.Screen name="Login" component={LoginScreen} />
     </Stack.Navigator>

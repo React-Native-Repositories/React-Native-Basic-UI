@@ -1,6 +1,8 @@
 export const colors = {
   light: {
     background: '#fdfdfd',
+    sidebar:'#fff',
+
     primaryColorLight: '#516195',
     primaryColorSolid: '#3b4b82',
     borderColor: '#f5f5f5',
@@ -16,6 +18,7 @@ export const colors = {
   },
   dark: {
     background: '#000000',
+    sidebar:'#121212'
   },
   common: {
     //pallate

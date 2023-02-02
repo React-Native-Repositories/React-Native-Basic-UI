@@ -16,7 +16,10 @@
 
 :loop: Sub Tabs ( Coming soon... )
 
-:loop: Animations ( Coming soon... ) etc.
+:loop: Animations ( Coming soon... )
+
+:loop: More features will be added soon...
+
 
 # Step 1
 

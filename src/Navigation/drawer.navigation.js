@@ -54,7 +54,6 @@ export default function DrawerNavigation(props) {
                 name={'menu'}
                 size={RFValue(22)}
                 color="white"
-                // style={{marginLeft: hp(20)}}
               />
             </AnimatedPressable>
           </View>
@@ -66,6 +65,7 @@ export default function DrawerNavigation(props) {
         ),
         headerStyle: {
           backgroundColor: '#516195', //Set Header color
+          height: 70
         },
         drawerLabelStyle: {
           marginLeft: -25,

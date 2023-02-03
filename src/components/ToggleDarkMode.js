@@ -5,7 +5,7 @@ import AppIcon from './AppIcon';
 import {hp} from '../utils/dimensions';
 import useThemeToggler from '../Theme/hooks/useThemeToggler';
 
-function ToggleDarkMode() {
+function ToggleDarkMode(props) {
   const {isThemeDark, toggleTheme, iconName} = useThemeToggler();
   const isDarkModeSupported = true;
 
@@ -23,7 +23,7 @@ function ToggleDarkMode() {
       <AppIcon
         name={iconName}
         size={hp(25)}
-        color={isThemeDark ? 'white' : 'white'}
+        color={props.color?props.color:isThemeDark ? 'white' : 'white'}
       />
     </Pressable>
   );

@@ -14,8 +14,6 @@ function TabNavigation(props) {
     <Tab.Navigator
       initialRouteName="Dashboard"
       screenOptions={{
-        // tabBarActiveBackgroundColor: '#3b4b82',
-        // tabBarInactiveBackgroundColor: '#3b4b82cf',
         tabBarActiveBackgroundColor: '#3b4b82',
         tabBarInactiveBackgroundColor: '#516195',
         tabBarLabelStyle: {
@@ -26,7 +24,7 @@ function TabNavigation(props) {
         tabBarStyle: [
           {
             display: 'flex',
-            height: Platform.OS === 'ios' ? hp(84) : hp(64),
+            height: hp(64),
             borderTopColor: 'gray',
           },
           null,
@@ -37,7 +35,6 @@ function TabNavigation(props) {
         component={HomeScreen}
         options={{
           headerShown: false,
-          // tabBarLabel: 'More',
           tabBarShowLabel: false,
           tabBarActiveTintColor: 'white',
           tabBarInactiveTintColor: 'white',
@@ -61,7 +58,6 @@ function TabNavigation(props) {
         component={LiveClassScreen}
         options={{
           headerShown: false,
-          // tabBarLabel: 'More',
           tabBarShowLabel: false,
           tabBarActiveTintColor: 'white',
           tabBarInactiveTintColor: 'white',
@@ -85,7 +81,6 @@ function TabNavigation(props) {
         component={DoubtsScreen}
         options={{
           headerShown: false,
-          // tabBarLabel: 'More',
           tabBarShowLabel: false,
           tabBarActiveTintColor: 'white',
           tabBarInactiveTintColor: 'white',

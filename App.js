@@ -6,9 +6,9 @@
  * @format
  * @flow strict-local
  */
-import {LogBox, StyleSheet} from 'react-native';
+import {LogBox} from 'react-native';
 import React, {useEffect} from 'react';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
+import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context';
 import DrawerNavigation from './src/Navigation/drawer.navigation';
 import {
   colorModeManager,
@@ -16,7 +16,8 @@ import {
   PreferencesContext,
 } from './src/Theme';
 import {NativeBaseProvider} from 'native-base';
-function App() {
+import {colors} from './src/Theme/colors';
+function App(props) {
   /* -------------------------------------------------------------------------- */
   /*                               UseEffect Section                            */
   /* -------------------------------------------------------------------------- */
@@ -56,15 +57,21 @@ function App() {
 
   return (
     <SafeAreaProvider>
-      <NativeBaseProvider
-        theme={NativeBaseTheme}
-        colorModeManager={colorModeManager}>
-        <PreferencesContext.Provider value={preferences}>
-          <DrawerNavigation />
-        </PreferencesContext.Provider>
-      </NativeBaseProvider>
+      {/* <StatusBar hidden /> */}
+      <SafeAreaView
+        style={{
+          flex: 1,
+          backgroundColor: colors.light.primaryColorLight,
+        }}>
+        <NativeBaseProvider
+          theme={NativeBaseTheme}
+          colorModeManager={colorModeManager}>
+          <PreferencesContext.Provider value={preferences}>
+            <DrawerNavigation />
+          </PreferencesContext.Provider>
+        </NativeBaseProvider>
+      </SafeAreaView>
     </SafeAreaProvider>
   );
 }
 export default App;
-const styles = StyleSheet.create({});

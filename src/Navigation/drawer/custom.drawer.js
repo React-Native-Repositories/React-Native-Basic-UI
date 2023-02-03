@@ -7,6 +7,8 @@ import {
 import useThemeToggler from '../../Theme/hooks/useThemeToggler';
 import {colors} from '../../Theme/colors';
 import {AppText} from '../../components';
+import { RFValue } from '../../utils/npm-helper/react-native-responsive-fontsize';
+import { hp } from '../../utils/dimensions';
 
 const CustomDrawer = props => {
   const {isThemeDark} = useThemeToggler();
@@ -22,27 +24,27 @@ const CustomDrawer = props => {
         }}>
         <Pressable
           style={{
-            padding: 20,
+            padding: RFValue(20),
             borderColor: isThemeDark ? colors.dark.sidebar : 'white',
             borderWidth: 0.5,
-            borderBottomColor: isThemeDark ? 'white' : colors.light.primaryColorLight,
+            borderBottomColor: isThemeDark ? 'white' : colors.common.gray,
           }}
           onPress={() => props.navigation.navigate('MyProfile')}>
           <View
             style={{
-              height: 80,
-              width: 80,
-              borderRadius: 40,
-              marginBottom: 10,
+              height: hp(80),
+              width: hp(80),
+              borderRadius: hp(40),
+              marginBottom: hp(10),
               backgroundColor: '#516195',
             }}
           />
           <AppText
             style={{
               color: isThemeDark ? 'white' : 'black',
-              fontSize: 18,
+              fontSize: RFValue(18),
               fontFamily: 'GoogleSans-Medium',
-              marginBottom: 5,
+              marginBottom: hp(5),
             }}>
             John Doe
           </AppText>
@@ -51,7 +53,7 @@ const CustomDrawer = props => {
               style={{
                 color: isThemeDark ? 'white' : 'black',
                 fontFamily: 'GoogleSans-Regular',
-                marginRight: 5,
+                marginRight: hp(5),
               }}>
               jd@gmail.com
             </Text>
@@ -63,7 +65,7 @@ const CustomDrawer = props => {
             backgroundColor: isThemeDark
               ? colors.dark.sidebar
               : colors.light.sidebar,
-            paddingTop: 10,
+            paddingTop: hp(10),
           }}>
           <DrawerItemList {...props} />
         </View>

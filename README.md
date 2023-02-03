@@ -1,4 +1,4 @@
-# CareerWill UI
+# React Native Basic UI Setup
 
 # Features:
 

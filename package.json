@@ -29,7 +29,8 @@
     "react-native-screens": "^3.19.0",
     "react-native-svg": "^13.7.0",
     "react-native-svg-transformer": "^1.0.0",
-    "react-native-vector-icons": "^9.2.0"
+    "react-native-vector-icons": "^9.2.0",
+    "rn-status-bar": "^0.1.6"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

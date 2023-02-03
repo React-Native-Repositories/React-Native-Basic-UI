@@ -17,6 +17,8 @@ import {
 } from './src/Theme';
 import {NativeBaseProvider} from 'native-base';
 import {colors} from './src/Theme/colors';
+import { StatusBar } from 'rn-status-bar';
+
 function App(props) {
   /* -------------------------------------------------------------------------- */
   /*                               UseEffect Section                            */
@@ -58,10 +60,11 @@ function App(props) {
   return (
     <SafeAreaProvider>
       {/* <StatusBar hidden /> */}
+      <StatusBar barStyle="light-content" backgroundColor={colors.light.primaryColorLight} />
       <SafeAreaView
         style={{
           flex: 1,
-          backgroundColor: colors.light.primaryColorLight,
+          // backgroundColor: colors.light.primaryColorLight,
         }}>
         <NativeBaseProvider
           theme={NativeBaseTheme}

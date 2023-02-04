@@ -50,7 +50,7 @@ export default function DrawerNavigation(props) {
           <View style={{marginLeft: hp(20)}}>
             <AnimatedPressable
               onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
-              <AppIcon name={'menu'} size={RFValue(22)} color="white" />
+              <AppIcon name={'menu'} size={hp(26)} color="white" />
             </AnimatedPressable>
           </View>
         ),
@@ -196,4 +196,3 @@ export default function DrawerNavigation(props) {
     </Drawer.Navigator>
   );
 }
-

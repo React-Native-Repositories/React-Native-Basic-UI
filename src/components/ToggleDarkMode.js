@@ -19,11 +19,15 @@ function ToggleDarkMode(props) {
   };
 
   return (
-    <Pressable onPress={handleToggleTheme} unstable_pressDelay={0} style={{marginRight:10}}>
+    <Pressable
+      onPress={handleToggleTheme}
+      unstable_pressDelay={0}
+      style={{marginRight: hp(20), 
+      }}>
       <AppIcon
         name={iconName}
         size={hp(25)}
-        color={props.color?props.color:isThemeDark ? 'white' : 'white'}
+        color={props.color ? props.color : isThemeDark ? 'white' : 'white'}
       />
     </Pressable>
   );

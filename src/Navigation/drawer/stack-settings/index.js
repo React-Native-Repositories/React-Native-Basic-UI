@@ -39,6 +39,7 @@ function SettingsStackNavigation(props) {
         options={{
           headerShown: true,
           headerBackTitleVisible: true,
+          headerTitleAlign:'center',
           headerTitleStyle: {fontFamily: 'GoogleSans-Regular'},
           headerTitleStyle: {
             fontSize: 16,
@@ -59,12 +60,12 @@ function SettingsStackNavigation(props) {
         name="SettingsLanguage"
         options={{
           headerShown: true,
-          headerBackTitleVisible: true,
           headerTitleStyle: {fontFamily: 'GoogleSans-Regular'},
           headerTitleStyle: {
             fontSize: 16,
           },
           headerTitle: t('common:language'),
+          headerTitleAlign:'center'
         }}
         component={SettingsLanguageScreen}
       />

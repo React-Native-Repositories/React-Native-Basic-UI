@@ -54,7 +54,7 @@ function AppHeader(props) {
           <View style={{alignSelf: 'flex-start'}}>
             <View style={{alignItems: 'center', flexDirection: 'row'}}>
               <AnimatedPressable onPress={openDrawer}>
-                <AppIcon name="menu" size={hp(22)} color="white" />
+                <AppIcon name="menu" size={hp(26)} color="white" />
               </AnimatedPressable>
               <AppText
                 fontWeight="bold"
@@ -72,9 +72,9 @@ function AppHeader(props) {
         <HStack marginRight={hp(28)} alignItems={'center'}>
           <Pressable
             style={{
-              height: hp(32),
-              width: hp(32),
-              borderRadius: hp(16),
+              height: hp(30),
+              width: hp(30),
+              borderRadius: hp(15),
               backgroundColor: colors.common.white,
               marginLeft: hp(18),
               alignItems: 'center',

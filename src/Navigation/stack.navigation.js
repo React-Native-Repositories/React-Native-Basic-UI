@@ -34,6 +34,7 @@ function StackNavigation(props) {
         options={{
           headerShown: false,
           headerBackTitleVisible: true,
+          headerTitleAlign:'center',
           headerTitleStyle: {fontFamily: 'GoogleSans-Regular'},
           headerTitleStyle: {
             fontSize: 16,

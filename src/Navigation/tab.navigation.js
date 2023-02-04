@@ -9,10 +9,13 @@ import DoubtsScreen from '../Screens/Tab/Doubts';
 import {AppIcon} from '../components';
 import {colors} from '../Theme/colors';
 import useThemeToggler from '../Theme/hooks/useThemeToggler';
+import { useTranslation } from 'react-i18next';
 
 const Tab = createBottomTabNavigator();
 function TabNavigation(props) {
   const {isThemeDark} = useThemeToggler();
+  const {t, i18n} = useTranslation();
+
   return (
     <Tab.Navigator
       initialRouteName="Dashboard"
@@ -55,7 +58,7 @@ function TabNavigation(props) {
                   color: 'white',
                   marginTop: hp(2),
                 }}>
-                Home
+                {t('common:home')}
               </Text>
             </View>
           ),
@@ -98,7 +101,7 @@ function TabNavigation(props) {
                   color: 'white',
                   alignSelf:'center'
                 }}>
-                Live
+                {t('common:live')}
               </Text>
             </View>
           ),
@@ -126,7 +129,7 @@ function TabNavigation(props) {
                   color: 'white',
                   marginTop: hp(2),
                 }}>
-                Doubts
+                {t('common:doubts')}
               </Text>
             </View>
           ),

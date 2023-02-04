@@ -1,12 +1,13 @@
 // https://medium.com/@dineshrrajput/multilanguage-support-in-react-native-a2cdc6e5c445
 import React from 'react';
 import {Pressable, View, StyleSheet} from 'react-native';
-import {useTranslation} from 'react-i18next';
 import {hp} from '../utils/dimensions';
 import {AppText} from '../components';
 import {RFValue} from '../utils/npm-helper/react-native-responsive-fontsize';
 import useThemeToggler from '../Theme/hooks/useThemeToggler';
 import { colors } from '../Theme/colors';
+import { useTranslation } from 'react-i18next';
+
 const LANGUAGES = [
   {code: 'en', label: 'English'},
   {code: 'hn', label: 'हिन्दी'},

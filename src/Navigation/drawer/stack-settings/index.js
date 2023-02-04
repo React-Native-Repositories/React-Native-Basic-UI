@@ -10,11 +10,13 @@ import {AppIcon} from '../../../components';
 import {RFValue} from '../../../utils/npm-helper/react-native-responsive-fontsize';
 import {DrawerActions, useNavigation} from '@react-navigation/native';
 import {colors} from '../../../Theme/colors';
+import { useTranslation } from 'react-i18next';
 
 const Stack = createStackNavigator();
 function SettingsStackNavigation(props) {
   const {isThemeDark} = useThemeToggler();
   const navigation = useNavigation();
+  const {t, i18n} = useTranslation();
   return (
     <Stack.Navigator
       detachInactiveScreens={false}
@@ -41,7 +43,7 @@ function SettingsStackNavigation(props) {
           headerTitleStyle: {
             fontSize: 16,
           },
-          label: 'Settings',
+          headerTitle: t('common:settings'),
           headerLeft: () => (
             <View style={{marginLeft: hp(20)}}>
               <AnimatedPressable
@@ -62,7 +64,7 @@ function SettingsStackNavigation(props) {
           headerTitleStyle: {
             fontSize: 16,
           },
-          headerTitle: 'Language',
+          headerTitle: t('common:language'),
         }}
         component={SettingsLanguageScreen}
       />

@@ -1,9 +1,16 @@
 export default {
-  languageSelector: 'अपनी भाषा का चयन करें',
-  signin:'साइन इन करें',
-  login:'में प्रवेश',
-  forgot:'पासवर्ड भूल गए?',
-  resendOtp:'अनुरोध ओटीपी',
-  home:'डैशबोर्ड',
-  loading:'लोड हो रहा है...'
+  home: 'डैशबोर्ड',
+  e_books: 'ई-बुक',
+  test_series: 'टेस्ट सीरीज',
+  my_orders: 'मेरे आदेश',
+  books: 'पुस्तकें',
+  faq: 'सामान्य प्रश्न',
+  privacy_policy: 'गोपनीयता नीति',
+  call_us: 'हमें कॉल करें / हेल्पलाइन',
+  share: 'एक दोस्त बताओ',
+  settings: 'समायोजन',
+  profile:'प्रोफ़ाइल',
+  language:'भाषा',
+  live:'लाइव',
+  doubts:'संदेह'
 };

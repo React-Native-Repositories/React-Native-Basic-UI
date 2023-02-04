@@ -19,6 +19,7 @@ import {
 import {NativeBaseProvider} from 'native-base';
 import {colors} from './src/Theme/colors';
 import {StatusBar} from 'rn-status-bar';
+import './src/Language/DCSLocalize';
 
 function App(props) {
   /* -------------------------------------------------------------------------- */

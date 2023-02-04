@@ -4,10 +4,12 @@ import LoginScreen from '../Screens/Stack/Login';
 import MyProfile from '../Screens/Stack/MyProfile';
 import useThemeToggler from '../Theme/hooks/useThemeToggler';
 import {colors} from '../Theme/colors';
+import { useTranslation } from 'react-i18next';
 
 const Stack = createStackNavigator();
 function StackNavigation(props) {
   const {isThemeDark} = useThemeToggler();
+  const {t, i18n} = useTranslation();
 
   return (
     <Stack.Navigator
@@ -36,7 +38,7 @@ function StackNavigation(props) {
           headerTitleStyle: {
             fontSize: 16,
           },
-          label: 'My Profile',
+          headerTitle: t('common:profile'),
         }}
         component={MyProfile}
       />

@@ -20,13 +20,14 @@ import StackNavigation from './stack.navigation';
 import {hp} from '../utils/dimensions';
 import AnimatedPressable from '../components/AppAnimatedPressable';
 import SettingsStackNavigation from './drawer/stack-settings';
+import {useTranslation} from 'react-i18next';
 
 const Drawer = createDrawerNavigator();
 
 export default function DrawerNavigation(props) {
   const navigation = useNavigation();
   const {isThemeDark} = useThemeToggler();
-
+  const {t, i18n} = useTranslation();
   return (
     <Drawer.Navigator
       drawerContent={props => <CustomDrawer {...props} />}
@@ -73,6 +74,7 @@ export default function DrawerNavigation(props) {
         options={{
           headerShown: false,
           headerLeftLabelVisible: true,
+          drawerLabel: t('common:home'),
           drawerIcon: ({color}) => (
             <AppIcon name="home" size={hp(22)} color={color} />
           ),
@@ -84,7 +86,7 @@ export default function DrawerNavigation(props) {
         options={{
           drawerItemStyle: {display: 'none'},
           headerShown: true,
-          label: 'My Profile',
+          label: t('common:profile'),
           drawerIcon: ({color}) => (
             <AppIcon name="person" size={hp(22)} color={color} />
           ),
@@ -95,7 +97,7 @@ export default function DrawerNavigation(props) {
         name="EBooks"
         options={{
           headerShown: true,
-          drawerLabel: 'E-Books',
+          drawerLabel: t('common:e_books'),
           drawerIcon: ({color}) => (
             <AppIcon name="book" size={hp(22)} color={color} />
           ),
@@ -106,7 +108,7 @@ export default function DrawerNavigation(props) {
         name="TestSeries"
         options={{
           headerShown: true,
-          drawerLabel: 'Test Series',
+          drawerLabel: t('common:test_series'),
           drawerIcon: ({color}) => (
             <AppIcon name="create" size={hp(22)} color={color} />
           ),
@@ -117,7 +119,7 @@ export default function DrawerNavigation(props) {
         name="MyOrders"
         options={{
           headerShown: true,
-          drawerLabel: 'My Orders',
+          drawerLabel: t('common:my_orders'),
           drawerIcon: ({color}) => (
             <AppIcon name="cart" size={hp(22)} color={color} />
           ),
@@ -128,7 +130,7 @@ export default function DrawerNavigation(props) {
         name="Books"
         options={{
           headerShown: true,
-          drawerLabel: 'Books',
+          drawerLabel: t('common:books'),
           drawerIcon: ({color}) => (
             <AppIcon name="book-outline" size={hp(22)} color={color} />
           ),
@@ -138,7 +140,7 @@ export default function DrawerNavigation(props) {
       <Drawer.Screen
         options={{
           headerShown: true,
-          drawerLabel: 'FAQ',
+          drawerLabel: t('common:faq'),
           drawerIcon: ({color}) => (
             <AppIcon name="reorder-four-outline" size={hp(22)} color={color} />
           ),
@@ -150,7 +152,7 @@ export default function DrawerNavigation(props) {
         name="PrivacyPloicy"
         options={{
           headerShown: true,
-          drawerLabel: 'Privacy Ploicy',
+          drawerLabel: t('common:privacy_policy'),
           drawerIcon: ({color}) => (
             <AppIcon name="alert-circle" size={hp(22)} color={color} />
           ),
@@ -161,7 +163,7 @@ export default function DrawerNavigation(props) {
         name="Help"
         options={{
           headerShown: true,
-          drawerLabel: 'Call Us / Helpline',
+          drawerLabel: t('common:call_us'),
           drawerIcon: ({color}) => (
             <AppIcon name="people-circle" size={hp(22)} color={color} />
           ),
@@ -172,7 +174,7 @@ export default function DrawerNavigation(props) {
         name="Refer"
         options={{
           headerShown: true,
-          drawerLabel: 'Tell a Friend',
+          drawerLabel: t('common:share'),
           drawerIcon: ({color}) => (
             <AppIcon name="share-social-outline" size={hp(22)} color={color} />
           ),
@@ -184,7 +186,7 @@ export default function DrawerNavigation(props) {
         name="Settings"
         options={{
           headerShown: false,
-          drawerLabel: 'Settings',
+          drawerLabel: t('common:settings'),
           drawerIcon: ({color}) => (
             <AppIcon name="settings-outline" size={22} color={color} />
           ),
@@ -195,4 +197,3 @@ export default function DrawerNavigation(props) {
   );
 }
 
-const styles = StyleSheet.create({});

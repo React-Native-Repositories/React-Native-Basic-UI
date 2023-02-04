@@ -14,7 +14,7 @@
 
 :white_check_mark: Custom Bottom Tab Bar
 
-:loop: Language Translation ( Coming soon... )
+:white_check_mark: Language Translation
 
 :loop: Sub Tabs ( Coming soon... )
 

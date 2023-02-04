@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {Dimensions, Platform, StyleSheet, Text, View} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {RFValue} from '../utils/npm-helper/react-native-responsive-fontsize';
 import {hp, wp} from '../utils/dimensions';
@@ -8,15 +8,17 @@ import LiveClassScreen from '../Screens/Tab/LiveClass';
 import DoubtsScreen from '../Screens/Tab/Doubts';
 import {AppIcon} from '../components';
 import {colors} from '../Theme/colors';
+import useThemeToggler from '../Theme/hooks/useThemeToggler';
 
 const Tab = createBottomTabNavigator();
 function TabNavigation(props) {
+  const {isThemeDark} = useThemeToggler();
   return (
     <Tab.Navigator
       initialRouteName="Dashboard"
       screenOptions={{
         tabBarActiveBackgroundColor: '#3b4b82',
-        tabBarInactiveBackgroundColor: '#516195',
+        tabBarInactiveBackgroundColor: '#3e4e87e3',
         tabBarLabelStyle: {
           fontSize: RFValue(12),
           fontFamily: 'GoogleSans-Regular',
@@ -71,24 +73,30 @@ function TabNavigation(props) {
             backgroundColor: colors.common.red,
             position: 'absolute',
             bottom: 0,
-            width: hp(62),
-            height: hp(62),
-            borderRadius: hp(31),
+            top: -2,
+            width: hp(68),
+            height: hp(68),
+            borderRadius: hp(34),
             zIndex: 8,
-            left: hp(145),
+            left: (Dimensions.get('window').width / 2) - 34,
+            borderColor: colors.light.background,
+            borderWidth: 4,
           },
           tabBarIcon: ({focused, color}) => (
-            <View alignItems={'center'}>
+            <View 
+            style={{justifyContent: 'center'}}
+            >
               <AppIcon
                 name={!focused ? 'play' : 'videocam'}
                 size={22}
                 color={color}
+                style={{alignSelf:'center'}}
               />
               <Text
                 style={{
                   fontSize: RFValue(12),
                   color: 'white',
-                  marginTop: hp(2),
+                  alignSelf:'center'
                 }}>
                 Live
               </Text>

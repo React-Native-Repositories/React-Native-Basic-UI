@@ -75,14 +75,20 @@ function AppHeader(props) {
               height: hp(32),
               width: hp(32),
               borderRadius: hp(16),
-              backgroundColor: colors.common.orange,
+              backgroundColor: colors.common.white,
               marginLeft: hp(18),
               alignItems: 'center',
               justifyContent: 'center',
             }}
             unstable_pressDelay={0}
             onPress={() => setModalVisible(!modalVisible)}>
-            <AppText style={{color: 'white', fontSize: RFValue(14)}}>
+            <AppText
+              style={{
+                color: colors.light.primaryColorLight,
+                fontSize: RFValue(14),
+                fontFamily: 'GoogleSans-Medium',
+                fontWeight: '800',
+              }}>
               {'J'}
             </AppText>
           </Pressable>

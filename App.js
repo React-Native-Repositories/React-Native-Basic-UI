@@ -2,7 +2,8 @@
  * Sample React Native App
  * https://github.com/facebook/react-native
  * https://dribbble.com/shots/5726952-Bingo-App-UI-Kit/attachments/11021810?mode=media
- *
+ * https://aboutreact.com/custom-navigation-drawer-sidebar-with-image-and-icon-in-menu-options/
+ * https://github.dev/itzpradip/react-navigation-v6-mix
  * @format
  * @flow strict-local
  */
@@ -17,7 +18,7 @@ import {
 } from './src/Theme';
 import {NativeBaseProvider} from 'native-base';
 import {colors} from './src/Theme/colors';
-import { StatusBar } from 'rn-status-bar';
+import {StatusBar} from 'rn-status-bar';
 
 function App(props) {
   /* -------------------------------------------------------------------------- */
@@ -59,12 +60,13 @@ function App(props) {
 
   return (
     <SafeAreaProvider>
-      {/* <StatusBar hidden /> */}
-      <StatusBar barStyle="light-content" backgroundColor={colors.light.primaryColorLight} />
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor={colors.light.primaryColorLight}
+      />
       <SafeAreaView
         style={{
           flex: 1,
-          // backgroundColor: colors.light.primaryColorLight,
         }}>
         <NativeBaseProvider
           theme={NativeBaseTheme}

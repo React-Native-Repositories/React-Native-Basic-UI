@@ -73,14 +73,24 @@ export default function ProfileModal(props) {
                       height: hp(32),
                       width: hp(32),
                       borderRadius: hp(16),
-                      backgroundColor: colors.common.orange,
+                      backgroundColor: isThemeDark
+                        ? colors.common.white
+                        : colors.light.primaryColorLight,
                       alignItems: 'center',
                       justifyContent: 'center',
                       position: 'absolute',
                       left: 0,
                       // top: 15,
                     }}>
-                    <AppText style={{color: 'white', fontSize: RFValue(14)}}>
+                    <AppText
+                      style={{
+                        color: isThemeDark
+                          ? colors.light.primaryColorLight
+                          : colors.common.white,
+                        fontSize: RFValue(14),
+                        fontFamily: 'GoogleSans-Medium',
+                        fontWeight: '800',
+                      }}>
                       {'J'}
                     </AppText>
                   </View>

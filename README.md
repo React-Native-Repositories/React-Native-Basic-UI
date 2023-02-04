@@ -6,7 +6,7 @@
 
 :white_check_mark:  Stack, Tab and Drawer Navigation 
 
-:white_check_mark:  Font and Size Responsive Design for all mobile screens 
+:white_check_mark:  Font and Size(height & width) Responsive Design for all mobile screens 
 
 :white_check_mark: Light and Dark Mode 
 

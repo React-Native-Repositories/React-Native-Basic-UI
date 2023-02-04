@@ -12,6 +12,8 @@
 
 :white_check_mark: SVG Images Rendering 
 
+:white_check_mark: Custom Bottom Tab Bar
+
 :loop: Language Translation ( Coming soon... )
 
 :loop: Sub Tabs ( Coming soon... )
@@ -30,6 +32,15 @@ npx react-native init CareerWill
 ```
 npm i --save @react-native-masked-view/masked-view @react-navigation/native @react-navigation/stack  metro-config react-native-gesture-handler react-native-safe-area react-native-safe-area-context react-native-screens react-native-svg react-native-svg-transformer react-native-vector-icons react-native-iphone-x-helper  @react-native-async-storage/async-storage react-native-reanimated
 ```
+
+for Language translation 
+
+```
+npm i --save i18next react-i18next react-native-localize
+
+```
+
+Settings -> Langauge -> Choose Language
 
 # Step 3
 
@@ -113,6 +124,7 @@ to add fonts to android/IOS
 # Step 5
 
 npm run-android
+
 
 npm run ios
 

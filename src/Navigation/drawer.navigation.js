@@ -9,7 +9,6 @@ import FAQScreen from '../Screens/Drawer/FAQ';
 import PrivacyPolicyScreen from '../Screens/Drawer/PrivacyPolicy';
 import ReferScreen from '../Screens/Drawer/Refer';
 import HelpScreen from '../Screens/Drawer/Help';
-import SettingsScreen from '../Screens/Drawer/Settings';
 import {AppIcon} from '../components';
 import CustomDrawer from './drawer/custom.drawer';
 import {RFValue} from '../utils/npm-helper/react-native-responsive-fontsize';
@@ -20,6 +19,7 @@ import {colors} from '../Theme/colors';
 import StackNavigation from './stack.navigation';
 import {hp} from '../utils/dimensions';
 import AnimatedPressable from '../components/AppAnimatedPressable';
+import SettingsStackNavigation from './drawer/stack-settings';
 
 const Drawer = createDrawerNavigator();
 
@@ -31,7 +31,6 @@ export default function DrawerNavigation(props) {
     <Drawer.Navigator
       drawerContent={props => <CustomDrawer {...props} />}
       screenOptions={{
-       
         headerShown: false,
         drawerActiveBackgroundColor: '#3b4b82',
         drawerActiveTintColor: '#fff',
@@ -50,11 +49,7 @@ export default function DrawerNavigation(props) {
           <View style={{marginLeft: hp(20)}}>
             <AnimatedPressable
               onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
-              <AppIcon
-                name={'menu'}
-                size={RFValue(22)}
-                color="white"
-              />
+              <AppIcon name={'menu'} size={RFValue(22)} color="white" />
             </AnimatedPressable>
           </View>
         ),
@@ -65,15 +60,14 @@ export default function DrawerNavigation(props) {
         ),
         headerStyle: {
           backgroundColor: '#516195', //Set Header color
-          height: 70
+          height: 70,
         },
         drawerLabelStyle: {
           marginLeft: -25,
           fontFamily: 'GoogleSans-Regular',
           fontSize: 14,
         },
-      }}
-      >
+      }}>
       <Drawer.Screen
         name="Home"
         options={{
@@ -156,7 +150,6 @@ export default function DrawerNavigation(props) {
         name="PrivacyPloicy"
         options={{
           headerShown: true,
-
           drawerLabel: 'Privacy Ploicy',
           drawerIcon: ({color}) => (
             <AppIcon name="alert-circle" size={hp(22)} color={color} />
@@ -179,7 +172,6 @@ export default function DrawerNavigation(props) {
         name="Refer"
         options={{
           headerShown: true,
-
           drawerLabel: 'Tell a Friend',
           drawerIcon: ({color}) => (
             <AppIcon name="share-social-outline" size={hp(22)} color={color} />
@@ -191,13 +183,13 @@ export default function DrawerNavigation(props) {
       <Drawer.Screen
         name="Settings"
         options={{
-          headerShown: true,
+          headerShown: false,
           drawerLabel: 'Settings',
           drawerIcon: ({color}) => (
             <AppIcon name="settings-outline" size={22} color={color} />
           ),
         }}
-        component={SettingsScreen}
+        component={SettingsStackNavigation}
       />
     </Drawer.Navigator>
   );

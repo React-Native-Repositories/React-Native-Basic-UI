@@ -1,18 +1,32 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
-import {gloablStyles} from '../../../Styles/global.styles';
-import {AppThemeScreen} from '../../../components';
+import {AppText, AppThemeScreen} from '../../../components';
 import useThemeToggler from '../../../Theme/hooks/useThemeToggler';
+import {RFValue} from '../../../utils/npm-helper/react-native-responsive-fontsize';
+import {useNavigation} from '@react-navigation/native';
 
 export default function SettingsScreen() {
   const {isThemeDark} = useThemeToggler();
+  const navigation = useNavigation();
   return (
     <AppThemeScreen>
-      <View style={gloablStyles.container}>
-        <Text style={{color: isThemeDark ? 'white' : 'black'}}>Settings Screen</Text>
+      <View style={styles.container}>
+        <TouchableOpacity onPress={() => navigation.navigate('SettingsLanguage')}>
+          <AppText style={styles.text}>Language Screen</AppText>
+        </TouchableOpacity>
       </View>
     </AppThemeScreen>
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    width: '90%',
+    alignSelf: 'center',
+    // backgroundColor:'red',
+    marginTop: 30,
+  },
+  text: {
+    fontSize: RFValue(14),
+  },
+});

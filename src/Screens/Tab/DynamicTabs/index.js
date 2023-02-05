@@ -4,12 +4,12 @@ import { gloablStyles } from '../../../Styles/global.styles'
 import { AppThemeScreen } from '../../../components'
 import useThemeToggler from '../../../Theme/hooks/useThemeToggler';
 
-export default function DoubtsScreen() {
+export default function DynamicTabsScreen() {
   const {isThemeDark} = useThemeToggler();
   return (
     <AppThemeScreen>
     <View style={gloablStyles.container}>
-      <Text  style={{color: isThemeDark ? 'white' : 'black'}}>Doubts Screen</Text>
+      <Text  style={{color: isThemeDark ? 'white' : 'black'}}>Coming soon...</Text>
     </View>
     </AppThemeScreen>
   )

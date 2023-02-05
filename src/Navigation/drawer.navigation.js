@@ -70,11 +70,11 @@ export default function DrawerNavigation(props) {
         },
       }}>
       <Drawer.Screen
-        name="Home"
+        name="Tabs"
         options={{
           headerShown: false,
           headerLeftLabelVisible: true,
-          drawerLabel: t('common:home'),
+          drawerLabel: t('common:tabs'),
           drawerIcon: ({color}) => (
             <AppIcon name="home" size={hp(22)} color={color} />
           ),

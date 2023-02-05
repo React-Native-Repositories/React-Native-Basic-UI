@@ -40,7 +40,7 @@ const LanguageSelector = () => {
                 styles.border,
                 {
                   borderColor: isThemeDark
-                    ? 'red'
+                    ? 'gray'
                     : '#00000029',
                 },
               ]}

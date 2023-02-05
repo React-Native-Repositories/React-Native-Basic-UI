@@ -12,5 +12,9 @@ export default {
   profile:'प्रोफ़ाइल',
   language:'भाषा',
   live:'लाइव',
-  doubts:'संदेह'
+  doubts:'संदेह',
+
+  tabs:'टैब',
+  fixed_tabs:'फिक्स्ड टैब्स',
+  dynamic_tabs:'गतिशील टैब'
 };

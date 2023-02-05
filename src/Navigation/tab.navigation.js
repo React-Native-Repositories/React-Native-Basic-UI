@@ -1,20 +1,18 @@
 import React from 'react';
-import {Dimensions, Platform, StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {RFValue} from '../utils/npm-helper/react-native-responsive-fontsize';
-import {hp, wp} from '../utils/dimensions';
+import {hp} from '../utils/dimensions';
 import HomeScreen from '../Screens/Tab/Home';
-import LiveClassScreen from '../Screens/Tab/LiveClass';
-import DoubtsScreen from '../Screens/Tab/Doubts';
 import {AppIcon} from '../components';
 import {colors} from '../Theme/colors';
-import useThemeToggler from '../Theme/hooks/useThemeToggler';
-import { useTranslation } from 'react-i18next';
+import {useTranslation} from 'react-i18next';
+import DynamicTabsScreen from '../Screens/Tab/DynamicTabs';
+import FixedTabsScreen from '../Screens/Tab/FixedTabs';
 
 const Tab = createBottomTabNavigator();
 function TabNavigation(props) {
-  const {isThemeDark} = useThemeToggler();
-  const {t, i18n} = useTranslation();
+  const {t} = useTranslation();
 
   return (
     <Tab.Navigator
@@ -51,7 +49,11 @@ function TabNavigation(props) {
           },
           tabBarIcon: ({focused, color}) => (
             <View alignItems={'center'}>
-              <AppIcon name="home" size={22} color={color} />
+              <AppIcon
+                name={!focused ? 'home-outline' : 'home'}
+                size={hp(22)}
+                color={color}
+              />
               <Text
                 style={{
                   fontSize: RFValue(12),
@@ -65,71 +67,79 @@ function TabNavigation(props) {
         }}
       />
       <Tab.Screen
-        name="LiveClass"
-        component={LiveClassScreen}
+        name="FixedTabs"
+        component={FixedTabsScreen}
         options={{
-          headerShown: false,
+          headerShown: true,
           tabBarShowLabel: false,
           tabBarActiveTintColor: 'white',
           tabBarInactiveTintColor: 'white',
-          tabBarItemStyle: {
-            backgroundColor: colors.common.red,
-            position: 'absolute',
-            bottom: 0,
-            top: -2,
-            width: hp(68),
-            height: hp(68),
-            borderRadius: hp(34),
-            zIndex: 8,
-            left: (Dimensions.get('window').width / 2) - 34,
-            borderColor: colors.light.background,
-            borderWidth: 4,
+          headerTitle: 'Fixed Tabs',
+          headerTintColor: '#fff',
+          headerStyle: {
+            backgroundColor: colors.light.primaryColorLight,
           },
+          //--------------------------------- custom tab styles ------------------------//
+          // tabBarItemStyle: {
+          //   backgroundColor: colors.common.red,
+          //   position: 'absolute',
+          //   bottom: 0,
+          //   top: -2,
+          //   width: hp(68),
+          //   height: hp(68),
+          //   borderRadius: hp(34),
+          //   zIndex: 8,
+          //   left: (Dimensions.get('window').width / 2) - 34,
+          //   borderColor: colors.light.background,
+          //   borderWidth: 4,
+          // },
           tabBarIcon: ({focused, color}) => (
-            <View 
-            style={{justifyContent: 'center'}}
-            >
+            <View style={{justifyContent: 'center'}}>
               <AppIcon
-                name={!focused ? 'play' : 'videocam'}
-                size={22}
+                name={!focused ? 'list-outline' : 'list-circle'}
+                size={hp(22)}
                 color={color}
-                style={{alignSelf:'center'}}
+                style={{alignSelf: 'center'}}
               />
               <Text
                 style={{
                   fontSize: RFValue(12),
                   color: 'white',
-                  alignSelf:'center'
+                  alignSelf: 'center',
                 }}>
-                {t('common:live')}
+                {t('common:fixed_tabs')}
               </Text>
             </View>
           ),
         }}
       />
       <Tab.Screen
-        name="Doubts"
-        component={DoubtsScreen}
+        name="DynamicTabs"
+        component={DynamicTabsScreen}
         options={{
-          headerShown: false,
+          headerShown: true,
           tabBarShowLabel: false,
           tabBarActiveTintColor: 'white',
           tabBarInactiveTintColor: 'white',
-          tabBarItemStyle: {
-            // borderTopStartRadius:20,
-            // borderBottomLeftRadius:20,
-            // marginLeft:5
+          headerTitle: 'Dynamic Tabs',
+          headerTintColor: '#fff',
+          headerStyle: {
+            backgroundColor: colors.light.primaryColorLight,
           },
           tabBarIcon: ({focused, color}) => (
             <View alignItems={'center'}>
-              <AppIcon name="help-circle" size={22} color={color} />
+              <AppIcon
+                name={!focused ? 'copy-outline' : 'copy'}
+                size={hp(22)}
+                color={color}
+              />
               <Text
                 style={{
                   fontSize: RFValue(12),
                   color: 'white',
                   marginTop: hp(2),
                 }}>
-                {t('common:doubts')}
+                {t('common:dynamic_tabs')}
               </Text>
             </View>
           ),

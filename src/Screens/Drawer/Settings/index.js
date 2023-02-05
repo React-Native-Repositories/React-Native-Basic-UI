@@ -12,7 +12,7 @@ export default function SettingsScreen() {
     <AppThemeScreen>
       <View style={styles.container}>
         <TouchableOpacity onPress={() => navigation.navigate('SettingsLanguage')}>
-          <AppText style={styles.text}>Language Screen</AppText>
+          <AppText  style={{color: isThemeDark ? 'white' : 'black'}}>Language Screen</AppText>
         </TouchableOpacity>
       </View>
     </AppThemeScreen>

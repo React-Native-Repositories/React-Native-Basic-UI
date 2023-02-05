@@ -16,7 +16,9 @@
 
 :white_check_mark: Language Translation
 
-:loop: Sub Tabs ( Coming soon... )
+:white_check_mark: Fixed Sub Tabs
+
+:loop: Dynamic Sub Tabs ( Coming soon... )
 
 :loop: Animations ( Coming soon... )
 
@@ -39,8 +41,18 @@ for Language translation
 npm i --save i18next react-i18next react-native-localize
 
 ```
-
 Settings -> Langauge -> Choose Language
+
+
+
+for Language Fixed Top Tabbard
+
+```
+npm i --save react-native-pager-view @react-navigation/material-top-tabs
+
+```
+Home -> Live -> Select Fixed Tabs
+
 
 # Step 3
 

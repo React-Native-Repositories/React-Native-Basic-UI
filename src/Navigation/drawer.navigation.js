@@ -1,14 +1,9 @@
-import {StyleSheet, View, Pressable} from 'react-native';
+import {View, Pressable} from 'react-native';
 import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
-import EbooksScreen from '../Screens/Drawer/EBooks';
-import MyOrdersScreen from '../Screens/Drawer/MyOrders';
-import TestSeriesScreen from '../Screens/Drawer/TestSeries';
 import TabNavigation from './tab.navigation';
 import FAQScreen from '../Screens/Drawer/FAQ';
-import PrivacyPolicyScreen from '../Screens/Drawer/PrivacyPolicy';
 import ReferScreen from '../Screens/Drawer/Refer';
-import HelpScreen from '../Screens/Drawer/Help';
 import {AppIcon} from '../components';
 import CustomDrawer from './drawer/custom.drawer';
 import {RFValue} from '../utils/npm-helper/react-native-responsive-fontsize';
@@ -21,6 +16,9 @@ import {hp} from '../utils/dimensions';
 import AnimatedPressable from '../components/AppAnimatedPressable';
 import SettingsStackNavigation from './drawer/stack-settings';
 import {useTranslation} from 'react-i18next';
+import LanguageScreen from '../Screens/Drawer/Language';
+import DropdownScreen from '../Screens/Drawer/Dropdowns';
+import AnimationsScreen from '../Screens/Drawer/Animations';
 
 const Drawer = createDrawerNavigator();
 
@@ -94,48 +92,15 @@ export default function DrawerNavigation(props) {
         component={StackNavigation}
       />
       <Drawer.Screen
-        name="EBooks"
+        name="Dropdowns"
         options={{
           headerShown: true,
-          drawerLabel: t('common:e_books'),
+          drawerLabel: t('common:custom_dropdown'),
           drawerIcon: ({color}) => (
             <AppIcon name="book" size={hp(22)} color={color} />
           ),
         }}
-        component={EbooksScreen}
-      />
-      <Drawer.Screen
-        name="TestSeries"
-        options={{
-          headerShown: true,
-          drawerLabel: t('common:test_series'),
-          drawerIcon: ({color}) => (
-            <AppIcon name="create" size={hp(22)} color={color} />
-          ),
-        }}
-        component={TestSeriesScreen}
-      />
-      <Drawer.Screen
-        name="MyOrders"
-        options={{
-          headerShown: true,
-          drawerLabel: t('common:my_orders'),
-          drawerIcon: ({color}) => (
-            <AppIcon name="cart" size={hp(22)} color={color} />
-          ),
-        }}
-        component={MyOrdersScreen}
-      />
-      <Drawer.Screen
-        name="Books"
-        options={{
-          headerShown: true,
-          drawerLabel: t('common:books'),
-          drawerIcon: ({color}) => (
-            <AppIcon name="book-outline" size={hp(22)} color={color} />
-          ),
-        }}
-        component={StackNavigation}
+        component={DropdownScreen}
       />
       <Drawer.Screen
         options={{
@@ -148,28 +113,7 @@ export default function DrawerNavigation(props) {
         name="FAQ"
         component={FAQScreen}
       />
-      <Drawer.Screen
-        name="PrivacyPloicy"
-        options={{
-          headerShown: true,
-          drawerLabel: t('common:privacy_policy'),
-          drawerIcon: ({color}) => (
-            <AppIcon name="alert-circle" size={hp(22)} color={color} />
-          ),
-        }}
-        component={PrivacyPolicyScreen}
-      />
-      <Drawer.Screen
-        name="Help"
-        options={{
-          headerShown: true,
-          drawerLabel: t('common:call_us'),
-          drawerIcon: ({color}) => (
-            <AppIcon name="people-circle" size={hp(22)} color={color} />
-          ),
-        }}
-        component={HelpScreen}
-      />
+
       <Drawer.Screen
         name="Refer"
         options={{
@@ -181,12 +125,33 @@ export default function DrawerNavigation(props) {
         }}
         component={ReferScreen}
       />
-
+      <Drawer.Screen
+        name="Animations"
+        options={{
+          headerShown: true,
+          drawerLabel: t('common:animations'),
+          drawerIcon: ({color}) => (
+            <AppIcon name="bonfire-outline" size={hp(22)} color={color} />
+          ),
+        }}
+        component={AnimationsScreen}
+      />
+      <Drawer.Screen
+        name="Language"
+        options={{
+          headerShown: true,
+          drawerLabel: t('common:language'),
+          drawerIcon: ({color}) => (
+            <AppIcon name="language-outline" size={hp(22)} color={color} />
+          ),
+        }}
+        component={LanguageScreen}
+      />
       <Drawer.Screen
         name="Settings"
         options={{
           headerShown: false,
-          drawerLabel: t('common:settings'),
+          drawerLabel: t('common:settings') + ' ' + '(Stack Nav)',
           drawerIcon: ({color}) => (
             <AppIcon name="settings-outline" size={22} color={color} />
           ),

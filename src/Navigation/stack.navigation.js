@@ -1,6 +1,5 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import LoginScreen from '../Screens/Stack/Login';
 import MyProfile from '../Screens/Stack/MyProfile';
 import useThemeToggler from '../Theme/hooks/useThemeToggler';
 import {colors} from '../Theme/colors';
@@ -43,7 +42,6 @@ function StackNavigation(props) {
         }}
         component={MyProfile}
       />
-      <Stack.Screen name="Login" component={LoginScreen} />
     </Stack.Navigator>
   );
 }

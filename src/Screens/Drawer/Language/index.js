@@ -2,10 +2,10 @@ import {StyleSheet} from 'react-native';
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
 import {ScrollView} from 'native-base';
-import LanguageSelector from '../../../../Language/selector';
-import { AppThemeScreen } from '../../../../components';
+import LanguageSelector from '../../../Language/selector';
+import {AppThemeScreen} from '../../../components';
 
-export default function SettingsLanguageScreen() {
+export default function LanguageScreen() {
   const navigation = useNavigation();
 
   const handleClose = () => {
@@ -14,7 +14,7 @@ export default function SettingsLanguageScreen() {
   return (
     <AppThemeScreen>
       <ScrollView style={styles.container}>
-          <LanguageSelector />
+        <LanguageSelector />
       </ScrollView>
     </AppThemeScreen>
   );

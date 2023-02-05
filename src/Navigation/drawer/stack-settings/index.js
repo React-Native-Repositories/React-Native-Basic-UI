@@ -1,6 +1,5 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import SettingsLanguageScreen from '../../../Screens/Drawer/Settings/language';
 import SettingsScreen from '../../../Screens/Drawer/Settings';
 import useThemeToggler from '../../../Theme/hooks/useThemeToggler';
 import AnimatedPressable from '../../../components/AppAnimatedPressable';
@@ -11,6 +10,7 @@ import {RFValue} from '../../../utils/npm-helper/react-native-responsive-fontsiz
 import {DrawerActions, useNavigation} from '@react-navigation/native';
 import {colors} from '../../../Theme/colors';
 import { useTranslation } from 'react-i18next';
+import SettingsDetailScreen from '../../../Screens/Drawer/Settings/SettingsDetail';
 
 const Stack = createStackNavigator();
 function SettingsStackNavigation(props) {
@@ -57,17 +57,17 @@ function SettingsStackNavigation(props) {
         component={SettingsScreen}
       />
       <Stack.Screen
-        name="SettingsLanguage"
+        name="SettingsDetail"
         options={{
           headerShown: true,
           headerTitleStyle: {fontFamily: 'GoogleSans-Regular'},
           headerTitleStyle: {
             fontSize: 16,
           },
-          headerTitle: t('common:language'),
+          headerTitle: 'Settings Detail',
           headerTitleAlign:'center'
         }}
-        component={SettingsLanguageScreen}
+        component={SettingsDetailScreen}
       />
     </Stack.Navigator>
   );

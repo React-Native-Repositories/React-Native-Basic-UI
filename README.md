@@ -6,6 +6,8 @@
 
 :white_check_mark:  Stack, Tab and Drawer Navigation 
 
+:white_check_mark:  Stack Navigation Screens in Drawer Navigation ( Eg: Settings Tab)
+
 :white_check_mark:  Font and Size(height & width) Responsive Design for all mobile screens 
 
 :white_check_mark: Light and Dark Mode 
@@ -35,15 +37,12 @@ npx react-native init CareerWill
 npm i --save @react-native-masked-view/masked-view @react-navigation/native @react-navigation/stack  metro-config react-native-gesture-handler react-native-safe-area react-native-safe-area-context react-native-screens react-native-svg react-native-svg-transformer react-native-vector-icons react-native-iphone-x-helper  @react-native-async-storage/async-storage react-native-reanimated
 ```
 
-for Language translation 
+to support status bar in IOS devices use below NPM
 
 ```
-npm i --save i18next react-i18next react-native-localize
+npm i rn-status-bar --save
 
 ```
-Settings -> Langauge -> Choose Language
-
-
 
 for Language Fixed Top Tabbard
 
@@ -51,7 +50,19 @@ for Language Fixed Top Tabbard
 npm i --save react-native-pager-view @react-navigation/material-top-tabs
 
 ```
-Home -> Live -> Select Fixed Tabs
+Home -> Fixed Tabs -> Select Fixed Tabs
+
+
+for Language translation 
+
+```
+npm i --save i18next react-i18next react-native-localize
+
+```
+Langauge -> Choose Language
+
+
+
 
 
 # Step 3

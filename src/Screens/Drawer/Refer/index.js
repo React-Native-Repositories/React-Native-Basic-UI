@@ -10,7 +10,7 @@ export default function ReferScreen() {
     <AppThemeScreen>
       <View style={gloablStyles.container}>
         <Text style={{color: isThemeDark ? 'white' : 'black'}}>
-          Refer Screen
+          Refer/Share Screen ( Coming Soon... )
         </Text>
       </View>
     </AppThemeScreen>

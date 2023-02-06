@@ -8,7 +8,7 @@ import {colors} from '../../../Theme/colors';
 
 export default function DynamicTabsScreen() {
   const {isThemeDark} = useThemeToggler();
-  const [selectedIndex, setSelectedIndex] = useState(1);
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   const NavigationTabs = [
     {

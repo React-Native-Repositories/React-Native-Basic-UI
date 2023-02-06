@@ -156,6 +156,10 @@ npm run-android
 
 npm run ios
 
+## Use Below to Covert SVG images to JS files
+
+https://transform.tools/svg-to-react-native
+
 ## For Splash Screen
 
 - Convert your icons in to different sizes using https://www.appicon.co/

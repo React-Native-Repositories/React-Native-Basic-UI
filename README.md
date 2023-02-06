@@ -146,7 +146,7 @@ to add fonts to android/IOS
 
 ## Step 4
 
-npx react-native assest ( to added fonts to android/ios )
+npx react-native assest ( it will update fonts to android/ios )
 
 cd/ios - pod install
 
@@ -159,9 +159,9 @@ npm run ios
 ## For Splash Screen
 
 - Convert your icons in to different sizes using https://www.appicon.co/
-- replace this images with android/app/src/main/res images ( Folder name starts with **mipmap** )
-- Update Your App Name in android/app/src/main/res/values/string.xml
-- Create color.xml file and paste below in android/app/src/main/res/values
+- replace this images with **android/app/src/main/res** images ( Folder name starts with **mipmap** )
+- Update Your App Name in **android/app/src/main/res/values/string.xml**
+- Create color.xml file under **android/app/src/main/res/values** and paste below  
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -175,7 +175,7 @@ npm run ios
 
 ```
 
-- Create background_splash.xml file and paste below in android/app/src/main/res/drawable
+- Create background_splash.xml file under **android/app/src/main/res/drawable** and paste below 
 
 ```
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
@@ -189,7 +189,7 @@ npm run ios
 
 ```
 
-- Create splashscreen.xml file and paste below in android/app/src/main/res/drawable
+- Create splashscreen.xml file under **android/app/src/main/res/drawable** and paste below
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -205,7 +205,7 @@ npm run ios
 
 ```
 
-- Import above in android/app/src/main/AndroidManifest.xml in activity
+- Import above in **android/app/src/main/AndroidManifest.xml** in activity
 
 ```
 <activity
@@ -214,7 +214,7 @@ android:theme="@style/SplashTheme"
 >
 ```
 
-- Add Below in android/app/src/main/res/values/styles.xml under resourses
+- Add Below in **android/app/src/main/res/values/styles.xml** under resourses
 
 ```
 <resources>

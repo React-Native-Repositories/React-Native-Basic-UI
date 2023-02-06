@@ -1,6 +1,10 @@
 # React Native Basic UI Setup
 
-# Features:
+## Demo App URL ( May not be up-to-date, Follow the below steps and run it in your local )
+
+https://i.diawi.com/w87ZVp
+
+## Features:
 
 :white_check_mark: Splash Screen Image Upon Starting of Application 
 
@@ -24,21 +28,21 @@
 
 :white_check_mark: Dynamic Sub Tabs
 
+:white_check_mark: Added More Helpers ( Share, Call, Download etc)
+
 :loop: Custom Dropdowns ( Coming soon... )
 
 :loop: FAQ Collapse View ( Coming soon... )
-
-:loop: Share Features ( Coming soon... )
 
 :loop: Animations ( Coming soon... )
 
 :loop: More features will be added soon...
 
-# Step 1
+## Step 1
 
 npx react-native init CareerWill
 
-# Step 2
+## Step 2
 
 ```
 npm i --save @react-native-masked-view/masked-view @react-navigation/native @react-navigation/stack  metro-config react-native-gesture-handler react-native-safe-area react-native-safe-area-context react-native-screens react-native-svg react-native-svg-transformer react-native-vector-icons react-native-iphone-x-helper  @react-native-async-storage/async-storage react-native-reanimated
@@ -69,7 +73,7 @@ npm i --save i18next react-i18next react-native-localize
 
 Langauge -> Choose Language
 
-# Step 3
+## Step 3
 
 **Copy assets/fonts from root**
 
@@ -140,21 +144,21 @@ npx react-native-asset
 
 to add fonts to android/IOS
 
-# Step 4
+## Step 4
 
 npx react-native assest ( to added fonts to android/ios )
 
 cd/ios - pod install
 
-# Step 5
+## Step 5
 
 npm run-android
 
 npm run ios
 
-# For Splash Screen
+## For Splash Screen
 
-- Convert your icons to different sizes using https://www.appicon.co/
+- Convert your icons in to different sizes using https://www.appicon.co/
 - replace this images with android/app/src/main/res images ( Folder name starts with **mipmap** )
 - Update Your App Name in android/app/src/main/res/values/string.xml
 - Create color.xml file and paste below in android/app/src/main/res/values
@@ -223,7 +227,7 @@ android:theme="@style/SplashTheme"
 </resources>
 ```
 
-# Light Mode
+## Light Mode
 
 <img src="/screenshots/1.png" width="300px"></img>
 <img src="/screenshots/2.png" width="300px"></img>
@@ -232,7 +236,7 @@ android:theme="@style/SplashTheme"
 <img src="/screenshots/5.png" width="300px"></img>
 <img src="/screenshots/6.png" width="300px" ></img>
 
-# Dark Mode
+## Dark Mode
 
 <img src="/screenshots/7.png" width="300px" ></img>
 <img src="/screenshots/8.png" width="300px" ></img>

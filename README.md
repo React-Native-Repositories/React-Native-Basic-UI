@@ -2,6 +2,8 @@
 
 # Features:
 
+:white_check_mark: Splash Screen Image Upon Starting of Application 
+
 :white_check_mark: Folder Architecture
 
 :white_check_mark: Stack, Tab and Drawer Navigation
@@ -149,6 +151,77 @@ cd/ios - pod install
 npm run-android
 
 npm run ios
+
+# For Splash Screen
+
+- Convert your icons to different sizes using https://www.appicon.co/
+- replace this images with android/app/src/main/res images ( Folder name starts with **mipmap** )
+- Update Your App Name in android/app/src/main/res/values/string.xml
+- Create color.xml file and paste below in android/app/src/main/res/values
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--   color for the app bar and other primary UI elements -->
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#A52D53</color>
+    <color name="splashscreen_background">#FFFFFF</color>
+    <color name="colorAccent">#FFFFFF</color>
+</resources>
+
+```
+
+- Create background_splash.xml file and paste below in android/app/src/main/res/drawable
+
+```
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/colorPrimary"/>
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@mipmap/ic_launcher"/>
+    </item>
+</layer-list>
+
+```
+
+- Create splashscreen.xml file and paste below in android/app/src/main/res/drawable
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/splashscreen_background"/>
+    <item>
+        <bitmap
+            android:gravity = "center"
+            android:src="@mipmap/ic_launcher"/>
+    </item>
+</layer-list>
+
+```
+
+- Import above in android/app/src/main/AndroidManifest.xml in activity
+
+```
+<activity
+...
+android:theme="@style/SplashTheme"
+>
+```
+
+- Add Below in android/app/src/main/res/values/styles.xml under resourses
+
+```
+<resources>
+...
+ <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+    <item name="android:windowBackground">@drawable/splashscreen</item>
+            <item name="android:windowDisablePreview">true</item>
+    </style>
+</resources>
+```
 
 # Light Mode
 

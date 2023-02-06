@@ -2,7 +2,6 @@
  * Sample React Native App
  * https://github.com/facebook/react-native
  * https://dribbble.com/shots/5726952-Bingo-App-UI-Kit/attachments/11021810?mode=media
- * https://aboutreact.com/custom-navigation-drawer-sidebar-with-image-and-icon-in-menu-options/
  * https://github.dev/itzpradip/react-navigation-v6-mix
  * https://github.com/NyashaNziramasanga/react-native-horizontal-scroll-menu
  * @format

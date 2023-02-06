@@ -42,14 +42,14 @@ npx react-native init CareerWill
 npm i --save @react-native-masked-view/masked-view @react-navigation/native @react-navigation/stack  metro-config react-native-gesture-handler react-native-safe-area react-native-safe-area-context react-native-screens react-native-svg react-native-svg-transformer react-native-vector-icons react-native-iphone-x-helper  @react-native-async-storage/async-storage react-native-reanimated
 ```
 
-to support status bar in IOS devices use below NPM
+**To support status bar in IOS devices use below NPM**
 
 ```
 npm i rn-status-bar --save
 
 ```
 
-for Language Fixed Top Tabbard
+**For Fixed Top Tab bar**
 
 ```
 npm i --save react-native-pager-view @react-navigation/material-top-tabs
@@ -58,7 +58,7 @@ npm i --save react-native-pager-view @react-navigation/material-top-tabs
 
 Home -> Fixed Tabs -> Select Fixed Tabs
 
-for Language translation
+**For Language Translation**
 
 ```
 npm i --save i18next react-i18next react-native-localize
@@ -69,7 +69,7 @@ Langauge -> Choose Language
 
 # Step 3
 
-Copy assets/fonts from root
+**Copy assets/fonts from root**
 
 Add below lines in babel.config.js
 
@@ -79,7 +79,7 @@ Add below lines in babel.config.js
   ],
 ```
 
-to support SVG icons replace metro.config.js file with below
+**to support SVG icons replace metro.config.js file with below**
 
 ```
 const { getDefaultConfig } = require('metro-config');
@@ -118,7 +118,7 @@ module.exports = {
 };
 ```
 
-for Fonts add react-native.config.js in root and copy below
+**For Fonts add react-native.config.js in root and copy below**
 
 ```
 module.exports = {

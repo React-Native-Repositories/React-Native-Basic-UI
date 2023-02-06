@@ -3,7 +3,6 @@ import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import TabNavigation from './tab.navigation';
 import FAQScreen from '../Screens/Drawer/FAQ';
-import ReferScreen from '../Screens/Drawer/Refer';
 import {AppIcon} from '../components';
 import CustomDrawer from './drawer/custom.drawer';
 import {RFValue} from '../utils/npm-helper/react-native-responsive-fontsize';
@@ -19,6 +18,7 @@ import {useTranslation} from 'react-i18next';
 import LanguageScreen from '../Screens/Drawer/Language';
 import DropdownScreen from '../Screens/Drawer/Dropdowns';
 import AnimationsScreen from '../Screens/Drawer/Animations';
+import MoreScreen from '../Screens/Drawer/More';
 
 const Drawer = createDrawerNavigator();
 
@@ -74,7 +74,7 @@ export default function DrawerNavigation(props) {
           headerLeftLabelVisible: true,
           drawerLabel: t('common:tabs'),
           drawerIcon: ({color}) => (
-            <AppIcon name="home" size={hp(22)} color={color} />
+            <AppIcon name="albums-outline" size={hp(22)} color={color} />
           ),
         }}
         component={TabNavigation}
@@ -86,7 +86,7 @@ export default function DrawerNavigation(props) {
           headerShown: true,
           label: t('common:profile'),
           drawerIcon: ({color}) => (
-            <AppIcon name="person" size={hp(22)} color={color} />
+            <AppIcon name="person-outline" size={hp(22)} color={color} />
           ),
         }}
         component={StackNavigation}
@@ -97,7 +97,7 @@ export default function DrawerNavigation(props) {
           headerShown: true,
           drawerLabel: t('common:custom_dropdown'),
           drawerIcon: ({color}) => (
-            <AppIcon name="book" size={hp(22)} color={color} />
+            <AppIcon name="options-outline" size={hp(22)} color={color} />
           ),
         }}
         component={DropdownScreen}
@@ -114,17 +114,6 @@ export default function DrawerNavigation(props) {
         component={FAQScreen}
       />
 
-      <Drawer.Screen
-        name="Refer"
-        options={{
-          headerShown: true,
-          drawerLabel: t('common:share'),
-          drawerIcon: ({color}) => (
-            <AppIcon name="share-social-outline" size={hp(22)} color={color} />
-          ),
-        }}
-        component={ReferScreen}
-      />
       <Drawer.Screen
         name="Animations"
         options={{
@@ -157,6 +146,21 @@ export default function DrawerNavigation(props) {
           ),
         }}
         component={SettingsStackNavigation}
+      />
+      <Drawer.Screen
+        name="More"
+        options={{
+          headerShown: true,
+          drawerLabel: t('common:more'),
+          drawerIcon: ({color}) => (
+            <AppIcon
+              name="ellipsis-vertical-circle-outline"
+              size={hp(22)}
+              color={color}
+            />
+          ),
+        }}
+        component={MoreScreen}
       />
     </Drawer.Navigator>
   );

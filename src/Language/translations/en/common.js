@@ -17,6 +17,7 @@ export default {
   tabs:'Tabs',
   fixed_tabs:'Fixed Tabs',
   dynamic_tabs:'Dynamic Tabs',
-  custom_dropdown:'Custom Dropdown',
-  animations:'Animations'
+  custom_dropdown:'Dropdown',
+  animations:'Animations',
+  more:'More'
 };

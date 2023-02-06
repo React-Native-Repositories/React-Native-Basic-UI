@@ -2,17 +2,17 @@
 
 # Features:
 
-:white_check_mark:  Folder Architecture  
+:white_check_mark: Folder Architecture
 
-:white_check_mark:  Stack, Tab and Drawer Navigation 
+:white_check_mark: Stack, Tab and Drawer Navigation
 
-:white_check_mark:  Stack Navigation Screens in Drawer Navigation ( Eg: Settings Tab)
+:white_check_mark: Stack Navigation Screens in Drawer Navigation ( Eg: Settings Tab)
 
-:white_check_mark:  Font and Size(height & width) Responsive Design for all mobile screens 
+:white_check_mark: Font and Size(height & width) Responsive Design for all mobile screens
 
-:white_check_mark: Light and Dark Mode 
+:white_check_mark: Light and Dark Mode
 
-:white_check_mark: SVG Images Rendering 
+:white_check_mark: SVG Images Rendering
 
 :white_check_mark: Custom Bottom Tab Bar
 
@@ -20,12 +20,17 @@
 
 :white_check_mark: Fixed Sub Tabs
 
-:loop: Dynamic Sub Tabs ( Coming soon... )
+:white_check_mark: Dynamic Sub Tabs
+
+:loop: Custom Dropdowns ( Coming soon... )
+
+:loop: FAQ Collapse View ( Coming soon... )
+
+:loop: Share Features ( Coming soon... )
 
 :loop: Animations ( Coming soon... )
 
 :loop: More features will be added soon...
-
 
 # Step 1
 
@@ -50,20 +55,17 @@ for Language Fixed Top Tabbard
 npm i --save react-native-pager-view @react-navigation/material-top-tabs
 
 ```
+
 Home -> Fixed Tabs -> Select Fixed Tabs
 
-
-for Language translation 
+for Language translation
 
 ```
 npm i --save i18next react-i18next react-native-localize
 
 ```
+
 Langauge -> Choose Language
-
-
-
-
 
 # Step 3
 
@@ -116,7 +118,6 @@ module.exports = {
 };
 ```
 
-
 for Fonts add react-native.config.js in root and copy below
 
 ```
@@ -132,31 +133,33 @@ module.exports = {
 and add
 
 ```
-npx react-native-asset 
+npx react-native-asset
 ```
 
 to add fonts to android/IOS
 
-
 # Step 4
 
- npx react-native assest ( to added fonts to android/ios )
- 
- cd/ios - pod install
+npx react-native assest ( to added fonts to android/ios )
+
+cd/ios - pod install
 
 # Step 5
 
 npm run-android
 
-
 npm run ios
 
 # Light Mode
 
- <img src="/screenshots/4.png" width="300px"></img> 
- <img src="/screenshots/3.png" width="300px" ></img> 
-  
-  # Dark Mode
-  <img src="/screenshots/2.png" width="300px" ></img> 
-  <img src="/screenshots/1.png" width="300px" ></img> 
+<img src="/screenshots/1.png" width="300px"></img>
+<img src="/screenshots/2.png" width="300px"></img>
+<img src="/screenshots/3.png" width="300px"></img>
+<img src="/screenshots/4.png" width="300px"></img>
+<img src="/screenshots/5.png" width="300px"></img>
+<img src="/screenshots/6.png" width="300px" ></img>
 
+# Dark Mode
+
+<img src="/screenshots/7.png" width="300px" ></img>
+<img src="/screenshots/8.png" width="300px" ></img>

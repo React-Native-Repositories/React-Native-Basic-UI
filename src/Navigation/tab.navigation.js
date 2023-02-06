@@ -78,6 +78,7 @@ function TabNavigation(props) {
           headerTintColor: '#fff',
           headerStyle: {
             backgroundColor: colors.light.primaryColorLight,
+            height:hp(64)
           },
           //--------------------------------- custom tab styles ------------------------//
           // tabBarItemStyle: {
@@ -96,7 +97,7 @@ function TabNavigation(props) {
           tabBarIcon: ({focused, color}) => (
             <View style={{justifyContent: 'center'}}>
               <AppIcon
-                name={!focused ? 'list-outline' : 'list-circle'}
+                name={!focused ? 'list-outline' : 'list'}
                 size={hp(22)}
                 color={color}
                 style={{alignSelf: 'center'}}
@@ -125,6 +126,7 @@ function TabNavigation(props) {
           headerTintColor: '#fff',
           headerStyle: {
             backgroundColor: colors.light.primaryColorLight,
+            height:hp(64)
           },
           tabBarIcon: ({focused, color}) => (
             <View alignItems={'center'}>
